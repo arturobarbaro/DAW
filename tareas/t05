@@ -1,0 +1,48 @@
+BUSCAR Y ANOTAR DEFINICION DE WIKIPEDIA
+https://es.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions
+serie de convenciones o especificaciones dirigidas al intercambio a través de Internet de todo tipo de archivos (texto, audio, vídeo, etc.) de forma transparente para el usuario. Una parte importante del MIME está dedicada a mejorar las posibilidades de transferencia de texto en distintos idiomas y alfabetos. En sentido general las extensiones de MIME van encaminadas a soportar:
+
+Texto en conjuntos de caracteres distintos de US-ASCII;
+adjuntos que no son de tipo texto;
+cuerpos de mensajes con múltiples partes (multi-part);
+información de encabezados con conjuntos de caracteres distintos de ASCII.
+
+BUSCAR UN RFC DONDE SE LISTEN LOS TIPOS MIME
+http://www.iana.org/assignments/media-types/media-types.xhtml
+https://tools.ietf.org/html/rfc2045
+
+    (1)   textual message bodies in character sets other than
+          US-ASCII,
+
+    (2)   an extensible set of different formats for non-textual
+          message bodies,
+
+    (3)   multi-part message bodies, and
+
+    (4)   textual header information in character sets other than
+          US-ASCII.
+
+
+BUSCAR 3 EJEMPLOS DE TIPOS MIME
+https://developer.mozilla.org/es/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Lista_completa_de_tipos_MIME
+text/java_script
+text/html
+image/gif
+audio/aac
+
+¿CUAL ES EL TIPO MIME PARA UNA IMAGEN PNG?
+image
+
+¿CUALES SON LOS TIPOS MIME RELACIONADOS CON HTML?
+text/html
+
+IDEM PARA UN FICHERO ZIP
+application/epub+zip
+
+USANDO LAS HERRAMIENTAS DEL DESARROLLADOR DE UN NAVEGADOR (EJ: FIREFOX) ANOTAR LOS TIPOS DE CONTENIDO (MIME) QUE ADMITE EL CLIENTE WEB SEGUN LAS CABECERAS DE PETICION. IDEM CON EL SERVIDOR Y LAS CABECERAS DE RESPUESTA
+Cabeceras peticion:
+
+¿CUALES SON LAS CABECERAS EN EL CLIENTE Y EN EL SERVIDOR RELACIONADAS CON TIPOS MIME?
+servidor: content-type
+cliente: accept
+

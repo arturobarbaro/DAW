@@ -1,0 +1,13 @@
+USANDO LAS HERRAMIENTAS DEL DESARROLADOR WEB OBSERVAR LAS PETICIONES Y RESPUESTAS DE UN CLIENTE A UN SERVIDOR WEB.
+
+IDENTIFICAR AL MENOS 2 CABECERAS VISTAS EN CLASE QUE APAREZCAN EN EL MENSAJE DE PETICION Y OTRAS 2 EN EL MENSAJE DE RESPUESTA
+
+cabeceras de peticion:
+Accept-Language: Los lengiajes que acepta el cliente y su orden por preferencia
+User-Agent: Informacion del cliente o navegador 
+  Mozilla/5.0 (X11; Ubuntu; Linu…) Gecko/20100101 Firefox/62.0
+Accept-Encoding: Cifrado que acepta el cliente
+
+de respuesta:
+Content-Length: longitd y tamaño en bytes del fichero solicitado
+Content-Type: tipo y formato del archivo //image/gif

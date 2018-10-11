@@ -1,0 +1,17 @@
+¿QUE ES UN RFC? BUSCAR LA DEFINICION EN WIKIPEDIA
+https://es.wikipedia.org/wiki/Request_for_Comments
+El Request for Comments (RFC) es un documento numérico en el que se describen y definen protocolos, conceptos, métodos y programas de Internet. La gestión de los RFC se realiza a través de IETF (el consorcio de colaboración técnica más importante de Internet, Internet Engineering Task Force).
+
+
+BUSCAR LOS RFC'S DE LOS PROTOCOLOS:
+
+1) HTTP
+	https://tools.ietf.org/html/rfc2616.html
+2) FTP
+	https://www.rfc-es.org/rfc/rfc0959-es.txt
+3) DNS
+	https://www.ietf.org/rfc/rfc1035.txt
+4) POP3
+	https://www.ietf.org/rfc/rfc1939.txt
+5) LDAP
+	https://tools.ietf.org/search/rfc4511
