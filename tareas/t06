@@ -1,0 +1,34 @@
+ The server has not found anything matching the Request-URI. No
+   indication is given of whether the condition is temporary or
+   permanent. The 410 (Gone) status code SHOULD be used if the server
+   knows, through some internally configurable mechanism, that an old
+   resource is permanently unavailable and has no forwarding address.
+   This status code is commonly used when the server does not wish to
+   reveal exactly why the request has been refused, or when no other
+   response is applicable.
+
+El servidor no ha encontrado nada que coincida con el URI de solicitud. No
+   Se da una indicación de si la condición es temporal o
+   permanente. El código de estado 410 (desaparecido) DEBERÍA usarse si el servidor
+   Sabe, a través de algún mecanismo configurable internamente, que un viejo
+   el recurso no está disponible permanentemente y no tiene una dirección de reenvío.
+   Este código de estado se usa comúnmente cuando el servidor no desea
+   revelar exactamente por qué la solicitud ha sido rechazada, o cuando no hay otra
+   La respuesta es aplicable.
+
+405 Método no permitido
+El método especificado en la línea de solicitud no está permitido para el recurso identificado por el URI de solicitud. La respuesta DEBE incluir una
+   Permitir encabezado que contiene una lista de métodos válidos para el solicitado
+   recurso.
+
+403 Prohibido
+
+   El servidor entendió la solicitud, pero se niega a cumplirla.
+   La autorización no ayudará y la solicitud NO DEBE repetirse.
+   Si el método de solicitud no era HEAD y el servidor desea hacer
+   Por qué no se ha cumplido la solicitud, debe describir el
+   Razón de la negativa en la entidad. Si el servidor no desea
+   poner esta información a disposición del cliente, el código de estado 404
+   (No encontrado) se puede utilizar en su lugar.
+
+
