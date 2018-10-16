@@ -17,12 +17,11 @@ El servidor no ha encontrado nada que coincida con el URI de solicitud. No
    La respuesta es aplicable.
 
 405 Método no permitido
-El método especificado en la línea de solicitud no está permitido para el recurso identificado por el URI de solicitud. La respuesta DEBE incluir una
+   El método especificado en la línea de solicitud no está permitido para el recurso identificado por el URI de solicitud. La respuesta DEBE incluir una
    Permitir encabezado que contiene una lista de métodos válidos para el solicitado
    recurso.
 
 403 Prohibido
-
    El servidor entendió la solicitud, pero se niega a cumplirla.
    La autorización no ayudará y la solicitud NO DEBE repetirse.
    Si el método de solicitud no era HEAD y el servidor desea hacer
