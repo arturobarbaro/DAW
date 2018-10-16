@@ -1,0 +1,21 @@
+¿COMO PUEDO MOSTRAR LAS CONEXIONES ACTIVAS?
+sin parametros, por defecto
+
+¿Y LOS PROCESOS QUE ESTAN ESCUCHANDO CONEXIONES POR ALGUN PUERTO?
+
+¿COMO PUEDO MOSTRAR LOS PROCESOS QUE ESTAN ESCUCHANDO CONEXIONES POR EL PUERTO 80? 
+netstat -an | grep: 80 | wc -l
+Recopila estadísticas sobre la cantidad de conexiones activas en el puerto 80 y canaliza estos datos al comando wc , que muestra el número de conexiones contando las líneas de la salida netstat original .
+
+¿CUANTOS PUEDE HABER COMO MAXIMO ESCUCHANDO POR EL PUERTO 80?
+
+
+a Mostrar tanto las tomas de escucha como las de no escucha.
+c Esto hará que netstat imprima la información seleccionada cada segundo continuamente.
+i Muestra una tabla de todas las interfaces de red.
+l Mostrar solo tomas de escucha. (Estos se omiten por defecto.)
+p Muestre el PID (identificador de proceso) y el nombre del programa al que pertenece cada socket.
+t Incluir información relacionada con los temporizadores de redes.
+u muestra las ID de usuario numéricas pero no afecta la resolución de los nombres de host o puerto.
+
+fuentes: https://www.computerhope.com/unix/unetstat.htm

@@ -1,0 +1,16 @@
+UNICODE
+ LF:    Salto de línea, u000A
+ CR:    Retorno de carro, u000D
+U+0008: Backspace	BS
+U+0009: Horizontal tab	HT
+U+0041	A
+U+0061	a
+
+ASCII
+ LF:    10/10 A/16
+ CR:    13/10 D/16
+ BS: 8
+ TAB: 9 
+ A: 65/10 41/16
+ a: 97/10 61/16
+
