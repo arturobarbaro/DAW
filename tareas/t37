@@ -1,0 +1,25 @@
+-Implementar, dar soporte y gestionar bases de datos corporativas.
+-Crear y configurar bases de datos relacionales.
+-Ser responsables de la integridad de los datos y la disponibilidad.
+-Diseñar, desplegar y monitorizar servidores de bases de datos.
+-Diseñar la distribución de los datos y las soluciones de almacenamiento.
+-Garantizar la seguridad de las bases de datos, realizar copias de seguridad y llevar a cabo la recuperación de desastres.
+-Planificar e implementar el aprovisionamiento de los datos y aplicaciones.
+-Diseñar planes de contingencia.
+-Diseñar y crear las bases de datos corporativas de soluciones avanzadas.
+-Analizar y reportar datos corporativos que ayuden a la toma de decisiones en la inteligencia de negocios.
+-Producir diagramas de entidades relacionales y diagramas de flujos de datos, normalización esquemática, localización lógica y física de bases de datos y parámetros de tablas.
+
+SEGUN LA ARQUITECTURA DE LA WEB DINAMICA, ¿EN QUE CAPA SITUAS EL TRABAJO DEL DBA?
+Capa de datos.
+Es donde residen los datos y es la encargada de acceder a los
+mismos. Está formada por uno o más gestores de bases de datos que realizan todo
+el almacenamiento de datos, reciben solicitudes de almacenamiento o
+recuperación de información desde la capa de negocio.
+
+¿PUEDE DEFINIR EL DBA ALGUNA REGLA O PROCESO RELACIONADO CON LA LOGICA DEL NEGOCIO?
+Entre sus tareas puede:
+-Analizar y reportar datos corporativos que ayuden a la toma de decisiones en la inteligencia de negocios.
+
+¿QUE IMPORTANCIA TIENE EL DBA EN EL CONTEXTO DE UNA APLICACION WEB?
+Alta en una web dinamica, ya que es el encargado de la tercera capa (de datos)

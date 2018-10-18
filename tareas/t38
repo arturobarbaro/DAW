@@ -1,0 +1,21 @@
+AppServ. Es una herramienta de código abierto para Windows. Instala Apache,
+PHP, MySQL y phpMyAdmin (interfaz web para manejar las bases de datos de
+MySQL), dejando las aplicaciones configuradas para su funcionamiento inmediato.
+• XAMPP. Es una herramienta también de código abierto con versiones para
+cualquier plataforma (Windows, Linux, MacOS, etc.). Instala Apache, PHP, MySQL,
+PERL (lenguaje de programación de scripts) y phpMyAdmin, entre otras muchas
+cosas. A veces, las versiones para Windows se denominan WAMP y las versiones
+para Linux se denominan LAMP.
+• Bitnami. Es un proyecto de código abierto que desarrolla paquetes de software
+para aplicaciones web. Aparte de instalar Apache, PHP y MySQL, también instala
+aplicaciones como sistemas de gestión de contenidos, foros, wikis, etc.. La
+instalación de los paquetes es muy simple: accedemos a la página web,
+seleccionamos la aplicación que deseamos (Joomla, Drupal, phpBB, etc.) y el
+sistema operativo donde lo vamos a instalar (Windows, Linux, Mac), y finalmente
+instalamos el paquete. Desde Julio de 2009 existe la opción de descargar
+máquinas virtuales (distribuciones de Linux con todos los elementos necesarios
+para que funcione la aplicación directamente).
+
+Un buen ejemplo es la integración de
+clientes de correo electrónico en páginas web, los denominados webmail.
+

@@ -1,0 +1,174 @@
+INFORMACION SOBRE TU ORDENADOR INCLUYENDO LA IP (DISTINGUIR ENTRE LA IP DE LA RED LOCAL QUE TIENE ASIGNADA TU ORDENADOR Y LA IP EXTERNA QUE USA EL ROUTER DEL INSTITUTO MEDIANTE EL CUAL TE CONECTAS A INTERNET)
+Hostname: 26.pool85-54-109.dynamic.orange.es
+Proxy: No Proxy or Invisible Proxy Used
+Internal LAN IP: 192.168.1.99
+SCRIPT_URL: /more-info-about-you/
+SCRIPT_URI: http://www.whatsmyip.org/more-info-about-you/
+HTTP_HOST: www.whatsmyip.org
+HTTP_CONNECTION: keep-alive
+HTTP_UPGRADE_INSECURE_REQUESTS: 1
+HTTP_USER_AGENT: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36
+HTTP_ACCEPT: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, image/apng, */*;q=0.8
+HTTP_REFERER: http://www.whatsmyip.org/
+HTTP_ACCEPT_ENCODING: gzip, deflate
+
+
+
+ESCANER DE PUERTOS (PORT SCANNER): COMPROBAR LOS PUERTOS ABIERTOS. ¿CUALES OBTENGO: LOS PUERTOS ABIERTOS DE MI ORDENADOR O LOS DEL ROUTER DEL INSTITUTO?
+Application	Port	Status
+FTP	21	Timed-Out
+SSH	22	Timed-Out
+Telnet	23	Timed-Out
+Mail [SMTP]	25	Timed-Out
+DNS	53	Timed-Out
+Web Server [HTTP]	80	Timed-Out
+Mail [POP]	110	Timed-Out
+netbios	137	Timed-Out
+netbios	138	Timed-Out
+netbios	139	Timed-Out
+Mail [IMAP]	143	Timed-Out
+Web Server [HTTPS]	443	Timed-Out
+Microsoft-DS Service	445	Timed-Out
+Apple Filesharing Protocol	548	Timed-Out
+Mail [SMTP Submission]	587	Timed-Out
+Mail [IMAP SSL]	993	Timed-Out
+Mail [POP SSL]	995	Timed-Out
+Database [MSSQL]	1433	Timed-Out
+VPN [L2TP]	1701	Timed-Out
+VPN [PPTP]	1723	Timed-Out
+Database [MySQL]	3306	Timed-Out
+Database [PgSQL]	5432	Timed-Out
+Calendar Server [CalDAV]	8008	Timed-Out
+Calendar Server [CalDAV SSL]	8443	Timed-Out
+
+
+TRAZAR UNA RUTA (TRACEROUTE) DESDE EL SERVIDOR DE WHATISMYIP Y TU ORDENADOR
+Hop	Hostname	IP Address	1	2	3
+1	97.v102.fe-1-0-0.core1.troy2.waveform.net	(204.11.35.97)	0.831 ms	0.340 ms	0.438 ms
+2	core10.tym.r256.net	(208.79.214.11)	0.238 ms	0.386 ms	0.199 ms
+3	det-b1-link.telia.net	(213.248.77.242)	0.742 ms	0.664 ms	0.860 ms
+4	nyk-bb4-link.telia.net	(62.115.113.34)	19.800 ms	19.572 ms	19.986 ms
+5	nyk-b5-link.telia.net	(80.91.254.14)	19.253 ms	24.474 ms	19.232 ms
+6	francetelecom-ic-130472-nyk-b5.c.telia.net	(213.248.103.2)	21.831 ms	23.059 ms	20.018 ms
+7	pos0-7-5-0.madtr2.madrid.opentransit.net	(193.251.241.1)	112.747 ms	112.325 ms	112.294 ms
+8	orangespain-27.gw.opentransit.net	(193.251.247.14)	110.218 ms	110.977 ms	110.219 ms
+9	-	-	*	*	*
+
+PING
+Ping Results
+Minimum: - 
+Maximum: - 
+Average: - 
+Standard Deviation: -	20 Pings Sent 
+0 Pings Received 
+100% Packet Loss
+
+WHOIS & DNS
+WHOIS (MARCA)
+
+NetRange: 172.224.0.0 - 172.239.255.255
+CIDR: 172.224.0.0/12
+NetName: AKAMAI
+NetHandle: NET-172-224-0-0-1
+Parent: NET172 (NET-172-0-0-0-0)
+NetType: Direct Assignment
+OriginAS:
+Organization: Akamai Technologies, Inc. (AKAMAI)
+RegDate: 2013-03-15
+Updated: 2018-01-10
+Ref: https://rdap.arin.net/registry/ip/172.224.0.0
+
+
+OrgName: Akamai Technologies, Inc.
+OrgId: AKAMAI
+Address: 150 Broadway
+City: Cambridge
+StateProv: MA
+PostalCode: 02142
+Country: US
+RegDate: 1999-01-21
+Updated: 2018-10-05
+Ref: https://rdap.arin.net/registry/entity/AKAMAI
+
+
+OrgTechHandle: IPADM11-ARIN
+OrgTechName: ipadmin
+OrgTechPhone: +1-617-444-0017
+OrgTechEmail: ip-admin@akamai.com
+OrgTechRef: https://rdap.arin.net/registry/entity/IPADM11-ARIN
+
+OrgAbuseHandle: NUS-ARIN
+OrgAbuseName: NOC United States
+OrgAbusePhone: +1-617-444-2535
+OrgAbuseEmail: abuse@akamai.com
+OrgAbuseRef: https://rdap.arin.net/registry/entity/NUS-ARIN
+
+OrgTechHandle: SJS98-ARIN
+OrgTechName: Schecter, Steven Jay
+OrgTechPhone: +1-617-274-7134
+OrgTechEmail: ip-admin@akamai.com
+OrgTechRef: https://rdap.arin.net/registry/entity/SJS98-ARIN
+
+DNS (marca.com)	172.230.210.213
+
+
+IP LOCATION
+IP Location Lookup
+
+172.230.210.213
+
+Approximate Geographic Location
+, , US
+
+HTTP HEADERS
+HTTP Request Headers
+GET / HTTP/1.1
+User-Agent	Mozilla/5.0 (WhatsMyIP.org HTTP_Headers) http://whatsmyip.org/ua
+Host	www.marca.com
+Accept	*/*
+Cache-Control	no-cache
+Connection	keep-alive
+Accept-Encoding	gzip,deflate
+HTTP Response Headers
+HTTP/1.1 301 Moved Permanently
+Server	nginx/1.14.0
+Date	Thu, 18 Oct 2018 07:58:02 GMT
+Content-Type	text/html
+Content-Length	185
+Connection	keep-alive
+Location	https://www.marca.com/
+HTTP/1.1 200 OK
+Server	nginx/1.14.0
+Content-Type	text/html; charset=iso-8859-15
+Content-Encoding	gzip
+Content-Length	37239
+Date	Thu, 18 Oct 2018 07:58:02 GMT
+Connection	keep-alive
+Vary	Accept-Encoding
+Vary	User-Agent
+
+
+1 ELEGIDA POR EL ALUMNO
+Website Ranking Lookup
+
+google.es
+Google PageRank
+Pagerank Lookup Currently Offline
+
+Alexa Webrank
+Alexa Webrank:
+
+Average Load Speed:
+
+Relative Load Speed:
+
+Sites That Link In:
+
+62
+
+1.3 Seconds
+
+Faster than 70% of Sites
+
+66,220
+
