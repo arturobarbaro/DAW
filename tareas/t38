@@ -1,3 +1,8 @@
+
+Un buen ejemplo es la integración de
+clientes de correo electrónico en páginas web, los denominados webmail.
+
+
 AppServ. Es una herramienta de código abierto para Windows. Instala Apache,
 PHP, MySQL y phpMyAdmin (interfaz web para manejar las bases de datos de
 MySQL), dejando las aplicaciones configuradas para su funcionamiento inmediato.
@@ -16,6 +21,4 @@ instalamos el paquete. Desde Julio de 2009 existe la opción de descargar
 máquinas virtuales (distribuciones de Linux con todos los elementos necesarios
 para que funcione la aplicación directamente).
 
-Un buen ejemplo es la integración de
-clientes de correo electrónico en páginas web, los denominados webmail.
 
