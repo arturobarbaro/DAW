@@ -1,6 +1,41 @@
+https://tools.ietf.org/html/rfc2045
+
 BUSCAR LA DESCRIPCION DEL TIPO MIME text/html (RFC MIME)
+
+ STD 11, RFC 822 , define un protocolo de representación de mensaje que especifica
+   considerable detalle sobre los encabezados de mensajes US-ASCII, y deja el
+   contenido del mensaje, o cuerpo del mensaje, como texto plano US-ASCII. Este conjunto de
+   documentos, llamados colectivamente el correo de Internet de usos múltiples
+   Extensiones, o MIME, redefine el formato de los mensajes para permitir
+
+    (1) cuerpos de mensajes textuales en juegos de caracteres distintos a
+          US-ASCII,
+
+    (2) un conjunto extensible de diferentes formatos para no textuales
+          cuerpos del mensaje,
+
+    (3) cuerpos de mensajes de varias partes, y
+
+    (4) información de encabezado textual en juegos de caracteres que no sean
+          US-ASCII.
 
 
 BUSCAR LA DESCRIPCION DE 3 TIPOS MIME RELACIONADOS CON IMAGENES
+https://www.iana.org/assignments/media-types/media-types.xhtml
+image/png  -> https://www.iana.org/assignments/media-types/image/png
+image/jpx  -> https://www.iana.org/assignments/media-types/image/jpx
+image/bmp  -> https://www.iana.org/assignments/media-types/image/bmp
+
+
+
 BUSCAR LA DESCRIPCION DE 3 TIPOS MIME NO RELACIONADOS CON LOS ANTERIORES
+audio/aac -> https://www.iana.org/assignments/media-types/audio/aac
+audio/mp4 -> https://www.iana.org/assignments/media-types/audio/mp4
+video/mp4 -> https://www.iana.org/assignments/media-types/video/mp4
+
 BUSCAR LA DESCRIPCION DE 3 TIPOS MIME QUE EL NAVEGADOR NO SEA CAPAZ DE TRATAR/MOSTRAR. EJ: FICHEROS ZIP
+aplication/zip -> https://www.iana.org/assignments/media-types/application/zip
+aplication/gzip ->  https://www.iana.org/assignments/media-types/application/gzip
+aplication/vnd.microsoft.portable-executable -> https://www.iana.org/assignments/media-types/application/vnd.microsoft.portable-executable
+
+
