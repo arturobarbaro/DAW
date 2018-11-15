@@ -1,0 +1,40 @@
+4.1 COMNANDOS
+    4.1.1 COMANDOS DE CONTROL DE USUARIO
+	USER nombreUsuario
+	PASS contraseña
+	CWD(CHANGE WOKING DIRECTORY) 
+	CDUP (Cambia al directorio padre)
+	REIN (Reiniciar la sesion dejando la conexion de control establecida) user (permitiendo que las tranfesrencias en progreso finalicen)
+	QUIT (finalizar la sesion. Si no hay transferencias cierra la conexion de control, en otro caso espera y cierra)
+
+    4.1.2 COMANDOS DE PARAMETROS DE TRANSFERENCIA
+	PORT (Se manda la ip y el puerto)
+	PASV (Solicita al ServerDTP que escuche en un puerto de datos (el cual no es le puerto por defecto) y que espere una peticion de conexion del cliente en vez de iniciar una una vez recibido un comando de transferencia. La respuesta a este comando incluye la direccion IP y el puerto de datos el cual el servidos escucha)
+	TYPE (Tipo de representacion A(ASCII [defecto]), I(binario))
+
+    4.1.3 COMANDOS DE SERVICIO FTP
+	RETR (Bajar un fchero. Solicitar una transferencia de un fichero de servidor al cliente)
+	STORE (Subir. El cliente transfiere un fichero al servidor(si existe se sobreescribe))
+	STOU (IDEM STORE solo que el fichero sera creado en el directorio bajo un nombre unico) (ficheros especificos)
+	APPE (Si el fichero no existe lo crea, sino añade al final)
+	REST (El parametro del comando REST representa un marcador en el servidor en el cual la transferencia del fichero debe ser reiniciada. No provoca transferencia de fichero sino que mueve el marcador del fichero al punto especificado. DEBE SER SEGUIDO INMEDIANTAMENTE POR UN COMANDO DE SERVICIO FTP el cual provocara que la transferencia del fichero continue en el punto indicado)
+	RNFR (Renombra una ruta. Ruta a renombrar)
+	RNTO (especifica el nuevo nombre a renombrar)
+	ABOR (Dice al servidor que aborte el comando de servicio FTP previo y cualquier transferencia de datos asociada (exito 226, anormalia 426))
+	DELE (Borrar un fichero en el servidor)
+	RMD (Borrar un directorio)
+	MKD (crear un directorio)
+	PWD (Mostrar directorio actual)
+	LIST (Provoca que el servidor envie el contenido del directorio al proceso DTP pasivo. Si la ruta especificada es un directorio, el servidor debe enviar una lista de los ficheros de ese directorio.
+	Si la ruta especifica un fichero el servidor debe enviar enviar informacion sobre ese fichero, si no se especifica ruta se usa directorio actual.
+	La transferencia de datos se realiza usando la conexion de datos con el tipo ASCII. EL USUARIO DEBE ASEGURAR QUE EL TIPO (TYPE) ES ASCII).
+	SITE (Informacion de los servicios  esenciales para la transferencia de ficheros que proporciona al servidor que no son lo suficientemente universales como para haber sido incluidos como comandos del protocolo.)
+	SYST (Tipo de sistema operativo)
+	STAT (Informacion de estado del servidor, por la conexion de control)
+	HELP (Provoca que el servidor envie informacion sobre el estado de implementacion usando la conexion de control. Informacion sobre comandos del protocolo o comandos especificos)
+	NOOP (Provoca que el servidor mande un OK) (Saber si el servidor esta activo o reincia la conexion para evitar una desconocion por TIMEOUT)
+
+	4.2 RESPUESTAS FTP
+ 		1XX
+		2XX
+		3XX
