@@ -1,0 +1,25 @@
+BUSCAR 3 COMANDOS FTP EN EL RFC DEL PROTOCOLO FTP
+
+MKD (crear un directorio)
+PWD (Mostrar directorio actual)
+NOOP (NOOP)
+            This command does not affect any parameters or previously
+            entered commands. It specifies no action other than that the
+            server send an OK reply
+
+BUSCAR UN EJEMPLO DE CADA UNO DE ELLOS
+MKD: Lo podemos usar para crear directorios siempre que tengamos permisos.
+Por ejemplo:
+ MKD MYDIR
+
+CWD: Lo usamos para cambiar el directorio de trabajo.
+Por ejemplo: Cambiamos al directorio MYDIR, que esta contenido en el actual.
+ CWD /MYDIR
+
+CWD /usr/dm
+200 directory changed to /usr/dm
+MKD pathname
+257 "/usr/dm/pathname" directory created
+
+NOOP: Lo usamos para asegurarnos de que estamos en comunicacion con el servidor.
+NOOP
