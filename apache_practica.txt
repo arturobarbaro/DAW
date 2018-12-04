@@ -1,0 +1,20 @@
+sudo a2ensite xxx.conf (apache/sites-a...)
+activa 
+cp xxx.conf yyy.conf
+nano yyy.conf
+mkdir /var/www/yyy
+cp ../xxx(index.html .
+
+scp jmagen.jpg arturo@vps612579.ovh.net:/var/www/yyy
+
+/ect/host modificar para acceder
+añadimos la ip y nombre
+
+
+CAMBIAR PUERTO
+/etc/apache2/
+habilitar puerto de escucha
+"/" sudo nano ports.conf 
+Listen 81
+
+guardar y restart
