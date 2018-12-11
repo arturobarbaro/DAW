@@ -17,4 +17,9 @@ habilitar puerto de escucha
 "/" sudo nano ports.conf 
 Listen 81
 
-guardar y restart
+guardar y restartls
+
+http://jaimito
+/etc/host
+IP vps
+
