@@ -1,0 +1,39 @@
+Comandos con conexión de datos (20)
+list
+Rtr (bajar)
+Store (subir)
+Stou 
+
+Comandos por conexión de control (21)
+user
+pass
+noop
+cwd
+pwd
+acct
+cdup (cambia al directorio padre)
+smnt
+port
+pasv
+type
+rnfr
+rnfo
+Abor
+Dele
+Rmd
+Mkd
+Pwd
+site
+appe
+
+CAMBIAR MENSAJE DE BIENVENIDA
+sudo nano /etc/vsftpd/vsftpd.conf
+añadir o modificar: ftpd_banner= mensaje
+ o para varias lineas: 
+añadir archivos a /etc/banners
+ej sudo nano /etc/banners/ftp.msg
+banne_file= /etc/banners/ftp.msg
+
+
+
+

@@ -1,0 +1,45 @@
+Paso Uno — Crear la Estructura del Directorio
+sudo mkdir -p /var/www/example.com/public_html
+sudo mkdir -p /var/www/test.com/public_html
+
+Paso Dos — Otorgar Permisos
+sudo chown -R $USER:$USER /var/www/example.com/public_html
+sudo chown -R $USER:$USER /var/www/test.com/public_html
+sudo chmod -R 755 /var/www
+
+Paso Tres — Crear Páginas de Prueba para cada Virtual Host
+nano /var/www/example.com/public_html/index.html
+cp /var/www/example.com/public_html/index.html /var/www/test.com/public_html/index.html
+
+Paso Cuatro — Crea un Nuevo Archivo para su Virtual Host
+sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/example.com.conf
+sudo nano /etc/apache2/sites-available/example.com.conf
+En totalidad, nuestro archivo virtual host debería verse así:
+/etc/apache2/sites-available/example.com.conf
+<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    ServerName example.com
+    ServerAlias www.example.com
+    DocumentRoot /var/www/example.com/public_html
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+Copiar el Primer Virtual Host y Configuralo para el Segundo Dominio
+
+Paso Cinco — Habilitar los Nuevos Archivos Virtual Host
+sudo a2ensite example.com.conf
+sudo a2ensite test.com.conf
+Posteriormente, deshabilite el sitio poder defecto definido en 000-default.conf:
+sudo a2dissite 000-default.conf
+Cuando concluyas, deberá reiniciar Apache para hacer que estos cambios sean efectivos:
+sudo systemctl restart apache2
+
+Paso Seis — Configure su Archivo Hosts Local (Opcional)
+sudo nano /etc/hosts
+127.0.0.1   localhost
+127.0.1.1   guest-desktop
+111.111.111.111 example.com
+111.111.111.111 test.com
+
+Paso Siete — Pruebe sus Resultados
+http://example.com
