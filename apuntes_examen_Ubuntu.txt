@@ -1,3 +1,5 @@
+reiniciar sudo /etc/init.d/apache2 restart
+
 Paso Uno — Crear la Estructura del Directorio
 sudo mkdir -p /var/www/example.com/public_html
 sudo mkdir -p /var/www/test.com/public_html
