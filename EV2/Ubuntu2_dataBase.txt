@@ -18,7 +18,7 @@ Mysql> CREATE DATABASE zoo
 Mysql> show databases
 
 Ahora damos privilegios a Alicia
- Mysql> GRANT ALL privileges ON zoo.* to ‘alicia’@’localhost’
+ Mysql> GRANT ALL privileges ON zoo.* to 'alicia'@'localhost'
 
 El siguiente paso es instalar phpmyadmin y asignar contraseña para ello:
 $ sudo apt install phpmyadmin
