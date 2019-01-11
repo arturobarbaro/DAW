@@ -4,7 +4,8 @@ Responder todo con Yes , excepto: ¿Remove test database…………..?
 
 Ya tenemos nuestra contraseña de root y a continuación entramos
 $ mysql -u root -p
-Mysql> CREATE USER ‘alicia’@’localhost’ IDENTIFIED BY ‘conejo89$’  
+Mysql> CREATE USER 'alicia'@'localhost' IDENTIFIED BY 'conejo89$'; 
+//GRANT ALL PRIVILEGES ON *.* TO 'alicia'@'localhost' IDENTIFIED BY 'conejo89$'; 
 Todos nos hemos creado el mismo usuario y password
 
 Algunos comandos vistos para moverse por mysql:
