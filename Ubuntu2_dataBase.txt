@@ -1,0 +1,36 @@
+Establecer contraseña de superusuario de MySQL (que no son los del sistema)
+$ sudo mysql_secure_installation
+Responder todo con Yes , excepto: ¿Remove test database…………..?
+
+Ya tenemos nuestra contraseña de root y a continuación entramos
+$ mysql -u root -p
+Mysql> CREATE USER ‘alicia’@’localhost’ IDENTIFIED BY ‘conejo89$’  
+Todos nos hemos creado el mismo usuario y password
+
+Algunos comandos vistos para moverse por mysql:
+Mysql> use mysql
+Mysql> show colum from ……
+Mysql> select host,user from users
+
+A continuación creamos la base de datos zoo
+Mysql> CREATE DATABASE zoo
+Mysql> show databases
+
+Ahora damos privilegios a Alicia
+ Mysql> GRANT ALL privileges ON zoo.* to ‘alicia’@’localhost’
+
+El siguiente paso es instalar phpmyadmin y asignar contraseña para ello:
+$ sudo apt install phpmyadmin
+“Importante marcar con el  espacio la casilla de apache”
+
+Ahora instalamos los modulos que teníamos qpendiente de instalar
+$ sudo apt install php7.3-mysqli
+$ sudo apt install php7.3-mbstring
+
+Ya podemos conectarnos desde el navegador para crear las tablas en la base de dato zoo:
+http://ip_servidor/phpmyadmin
+y nos logueamos con la cuenta de Alicia creada previamente
+y creamos la tabla animales con las columnas:
+alias  char(8)
+peso   int  
+sexo   char(1)  
