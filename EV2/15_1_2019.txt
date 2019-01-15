@@ -5,3 +5,18 @@ ctrl + r; //Busqueda incremental hacia detras;
 SCP para subir archivos;
 //desde pc local
  scp *.php arturo@vps612581.ovh.net:/home/arturo
+
+VERSION PHP Y APACHE
+php -v
+more /etc/apache2/sites-enabled/vps.conf //el de por defecto
+ nano vps.conf
+ >> DocumentRoot /var/www/vps
+    DirectoryIndex index.php index.html
+
+CAMBIAR PERMISOS:
+sudo chown -R arturo /var/www/vps
+
+sudo nano index.php
+<?php phpinfo() ?>
+
+cp *.php /var/www/vps
