@@ -1,0 +1,7 @@
+use zoo; //cambiar base de datos
+insert into animales values ('joe', 21, 'V'),('winter',24, 'V'); //tobi, 20, v. robi,100,v. lisa,10, f;
+ctrl + r; //Busqueda incremental hacia detras;
+
+SCP para subir archivos;
+//desde pc local
+ scp *.php arturo@vps612581.ovh.net:/home/arturo
