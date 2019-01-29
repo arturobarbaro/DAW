@@ -1,0 +1,26 @@
+Nos conectamos al vps //nombre=status
+apachectl -k graceful //sustituye al restart
+
+Contextos: server config, virtual host, directory, .htacces
+
+Modulos: mods-avaliable (modulos disponibles), mods-enabled (enlaces)
+apache2ctl -M sort | more //Modulos disponibles
+
+Saber si un modulo esta cargado
+apache2ctl -M | grep nombre
+a2enmod o a2dismond
+sudo a2dismond nombre
+
+Contenido ficheros de conf de los modulos:
+cat nombre.load
+
+conf-avaliable //configuracion phpyadmin incluida
+
+Acceder al estado del servidor
+vps612581.ovh.net/server.status
+
+http://vps612581.ovh.net/estado?refresh=10 //tiempo
+//hacer la peticion desde nuestro servidor
+
+
+
