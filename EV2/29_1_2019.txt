@@ -17,7 +17,7 @@ cat nombre.load
 conf-avaliable //configuracion phpyadmin incluida
 
 Acceder al estado del servidor
-vps612581.ovh.net/server.status
+vps612581.ovh.net/server.status //o /estado
 
 http://vps612581.ovh.net/estado?refresh=10 //tiempo
 //hacer la peticion desde nuestro servidor
