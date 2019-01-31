@@ -61,6 +61,23 @@ Dos formas:
 1-http://usuario:contraseña@vps612581.ovh.net/server-info
 
 Actividad:
-Escribir una url para acceder al fichero osito.png que esta en /img en la maquina vps... por el puerto 81.
+Escribir una url para acceder al fichero osito.png que esta en /img
+ en la maquina vps... por el puerto 81.
 http://vps612581.ovh.net:81/img/osito.png
 http://batman:murcia@vps612581.ovh.net/img/osito.png
+
+Cabecera de peticion Authorization: Codificacion usuario y pass
+
+sudo tcpflow port 80
+
+DESCODIFICAR:
+el fichero de tcpflow
+echo -n autorization... | base64 -d
+ESTE SERIA EL PROCESO DE AUTORIZACION
+
+
+ACTIVIDADES:
+-OBESERVAR PETICIONES Y RESPUESTAS PARA AUTORIZACIONES CORRECTAS E INCORR.
+-EVITAR QUE EL NAVEGADOR ENVIE AUTOMATICAMENTE
+(RECUERDE EL USUARIO Y LA CONTRASEÑA USADO EN LA ULTIMA "SESION"
+ DE ACCESO A LA INFORMACION DEL SERVIDOR
