@@ -1,0 +1,66 @@
+CONTROLES DE ACCESO
+
+authz_core y authz_host, mod_redwrite
+
+Ver cual de esos modulos estan habilitados en apache:
+4 formas
+1- ls /etc/apache2/mods-enabled
+2- apacheclt -M | egrep "* *"
+3- http://vps...../server-status
+4- http://vps..../server-info?list
+si: auth_core, authz_host. no: mod_rewrite
+
+Restringir usuarios apache.
+<RequireAny>
+</RequireAny> **Usuarios apache
+
+
+CREAR USUARIOS en apache: htpasswd
+Creaccion de ficheros para autentificacion de ususarios http.
+Los recursos disponibles desde el servidor http apache pueden
+ser restringidos a los ususarios listado en los ficheros
+creados por htpasswd.
+Crea fichero de texto plano.
+Puede encriptar las contraseñas usando los siguientes algoritmos
+de cifrado
+1º bcrypt (version de md5 de apache)
+2º sha1
+3º crypt (funcion del sistema operativo)
+sha1 y crypt son inseguras, se usará bcrypt.
+
+cd /etc/apache2
+sudo htpasswd -c .htpasswd usuario
+contraseña
+//echo clave | md5sum ver encriptacion md5****
+
+Encriptar con salt la contraseña
+openssl passwd -apr1 -salt salt_de_8_caracteres murcia
+//Obtener contraseña: cat .htpasswd | cut -d: -f2
+//Didrencia entre claves
+openssl passwd -apr1 -salt salt_de_8_caracteres murcia | diff - <(cat .htpasswd | cut -d: -f2)
+
+Creamos otro suario:
+sudo htpasswd .htpasswd robin
+cadiz
+
+nos dirigimos a:
+cd mods_enabled
+sudo nano info.conf
+
+Añadimos:
+AuthType Basic
+Authname "Acceso a ka informacion del servidor restringida"
+AuthUserFile /etc(apache2/.htpasswd
+Require user batman
+
+sudo apache2ctl graceful
+sudo a2enmod info //Habilitar modulo info 
+
+FORMATO URL CON USUARIO Y CONTRASEÑA:
+Dos formas:
+1-http://usuario:contraseña@vps612581.ovh.net/server-info
+
+Actividad:
+Escribir una url para acceder al fichero osito.png que esta en /img en la maquina vps... por el puerto 81.
+http://vps612581.ovh.net:81/img/osito.png
+http://batman:murcia@vps612581.ovh.net/img/osito.png
