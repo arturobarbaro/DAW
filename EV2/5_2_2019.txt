@@ -1,0 +1,30 @@
+Controles de acceso:
+
+Directivas que nos interesan:<Directory><Files><Location>
+
+Terminos para describir directivas:
+Directiva AllowOverride //valor por defecto AllowOverride None
+
+nos conectamos al vps:
+cd /etc/apache2/sites-ennabled
+sudo nano vps.conf
+desactivamos 000-default.conf
+
+AllowOverride su contexto es directory no server config (apache2.conf)
+
+añadimos en vps.conf
+<Directory /var/www/vps/img>
+	AllowOverride AuthConfig
+	AuthType Basic
+	AuthName "Acceso a las imagenes restrigido"
+	AuthUserFile /etc/apache2/.htpasswd
+	Require user batman robin
+</Directory>
+
+Contenedor directory:
+sites-enabled/vps.conf
+
+.htaccess
+Permite el acesso a cada directorio de la conf de apache siempre que este tambien establecido en AllowOverride
+
+
