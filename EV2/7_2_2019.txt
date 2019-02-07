@@ -1,0 +1,10 @@
+cd /etc/apache2
+sudo nano apache2.comf
+AllowOverride None //Ya lo incluye apache
+nano sites-enabled/vps.conf
+Directiva options nos permite estableces politicas asignando indices de cara al contenido que pueda ver el usuario.
+Debemos restringirlo
+Directiva Options en DAWEB DOCUMENTACION //Usamos: Indexes
+diferencias -Indexes y +Indexes -> se aplican a subdirectorios
+-Indexes +FollowSk...
+
