@@ -49,6 +49,31 @@ Base64.
 Codificacion cabezeras authorization
 
 
-CERTIFIACDOS DIGITALES:
+CERTIFIACDOS DIGITALES: Contienen la clave publica 
 -AUTOFIRMADO.
 Lo podemos usar pero el cliente no lo conoce.
+habilitar modulo ssl: sudo a2enmod ssl
+restart
+sudo mkdir /etc/apache2/sll
+sudo opensll req-x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
+/etc/apache2/ssl/apache.crt //fichero de certificado digital
+
+como se genera:
+nos conectamenos al vps
+mkdir demo
+cd demo
+sudo opensll req-x509 -nodes -days 365 -newkey rsa:2048 -keyout...
+ES, Cadiz, Sanl, Doñana, 2DAW, --IMPORTANTE-- vps612581.ovh.net, arturo.barba@iesdonana.org
+//debemos configurar apache para que use estos ficheros
+mkdir /etc/apache2/sll
+cp . /etc/apache2/ssl
+sudo a2enmod ssl //si no esta habilitado
+graceful
+apache2clt -M | grep ssl
+cd /etc/apache2/sites-available
+cp sudo a2ensite ...
+
+-GRATUITO (AUTORIZATOPOR CA)
+Nos permiten obtener un certificado.
+3)Comodo es una de las mas importantes a nivel mundial.
+Ofrece certificados gratuitos
