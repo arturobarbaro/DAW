@@ -1,0 +1,54 @@
+HTTPS Y CERTIFICADOS DIGITALES
+
+X.509.
+(Certificados. nos interesa entender que es el formato que vamos a usar de clave pública)
+
+RSA.
+(clave publica y privada. Asimetrico)
+
+AES.
+(simetrico, )
+
+funcion hash.
+(obtenemos una longitud fija, se aplica en ciptografia)
+
+funcion hash criptografica 
+(Caso particular. caracateristicas ideales:
+1. Es determinista: un mismo mensaje siempre resulta en el mismo hash
+2. La computación del valor hash es rapida para cualquier mensaje.
+3. Es inviable generar un mensaje a partir de su valor hash.
+4. Un pequeño cambio en un mensaje debria cambiar el valor hash de tal manera que el nuevo valor no parezca que tenga correlación con el valor hash antiguo.
+5. Es inviable encontrar 2 mensajes diferentes con el mismo valor hash.
+)
+
+MD5.
+Es un algoritmo que aplica una funcion de hash.
+
+SHA.
+Familia de funciones criptográficas.
+Usamos sha256.
+
+OpenSSL.
+Un paquete de herramientas relacionadas con la ciptografia.
+man openssl
+Funcionalidades que ofrece en lineas de comando:
+1-Creacion y administracion de claves privadas, claves publicas y parametros.
+2-Operaciones criptograficas de clave publica.
+3-Creacion de certificados X509, CSRs y CRLs.
+4-Calculo de resumen de mensajes.
+5-Encriptacion y desencriptacion.
+6-Pruebas SSL/TLS cliente-servidor.
+7-Gestion de S/MIME firmado o correo encriptado.
+8-Petición de marcas horarias, generación y verificación.
+
+Formato PEM.
+Claves criptograficas y certificados.
+PEM es un formato de ficheros para almacenar y enviar claves criptograficas, certificados y otros datos.
+
+Base64.
+Codificacion cabezeras authorization
+
+
+CERTIFIACDOS DIGITALES:
+-AUTOFIRMADO.
+Lo podemos usar pero el cliente no lo conoce.
