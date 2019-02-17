@@ -54,7 +54,7 @@ CERTIFIACDOS DIGITALES: Contienen la clave publica
 Lo podemos usar pero el cliente no lo conoce.
 habilitar modulo ssl: sudo a2enmod ssl
 restart
-sudo mkdir /etc/apache2/sll
+sudo mkdir /etc/apache2/ssl
 sudo opensll req-x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
 /etc/apache2/ssl/apache.crt //fichero de certificado digital
 
@@ -69,7 +69,7 @@ mkdir /etc/apache2/sll
 cp . /etc/apache2/ssl
 sudo a2enmod ssl //si no esta habilitado
 graceful
-apache2clt -M | grep ssl
+apache2ctl -M | grep ssl
 cd /etc/apache2/sites-available
 cp sudo a2ensite ...
 
