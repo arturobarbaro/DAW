@@ -33,7 +33,7 @@ La PidFiledirectiva establece el archivo en el que el servidor registra el ID de
 Los ServerAdminconjuntos de la dirección de contacto que el servidor incluye en los mensajes de error se devuelve al cliente. Si el httpdno reconoce el argumento suministrado como una URL, asume que es una dirección de correo electrónico y la añade mailto:en los destinos de hipervínculo. Sin embargo, se recomienda usar una dirección de correo electrónico, ya que hay muchos scripts CGI que hacen esa suposición. Si desea utilizar una URL, debería apuntar a otro servidor bajo su control. De lo contrario, los usuarios no podrán contactarlo en caso de errores.
 
 8) ServerName: https://httpd.apache.org/docs/2.4/mod/core.html#servername
-La ServerName directiva establece el esquema de solicitud, el nombre de host y el puerto que el servidor utiliza para identificarse.
+La ServerName directiva establece el esquema de solicitud, el nombre de host y el puerto que el servidor utiliza para identificarse. ServerName [scheme://]domain-name|ip-address[:port]
 
 ServerName se utiliza (posiblemente junto con ServerAlias) para identificar de forma única un host virtual, cuando se usan hosts virtuales basados ​​en nombres .
 
