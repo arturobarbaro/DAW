@@ -3,12 +3,22 @@ APUNTES T4 DAW:
 Lista de directivas importantes
 1) DirectoryIndex: 
 La DirectoryIndexdirectiva establece la lista de recursos a buscar, cuando el cliente solicita un índice del directorio al especificar un / al final del nombre del directorio. Local-url es la URL (codificada en%) de un documento en el servidor en relación con el directorio solicitado; suele ser el nombre de un archivo en el directorio. Se pueden proporcionar varias URL, en cuyo caso el servidor devolverá la primera que encuentre. Si no existe ninguno de los recursos y la Indexesopción está establecida, el servidor generará su propia lista del directorio.
+<Directory "/foo">
+    DirectoryIndex index.html index.php
+</Directory>
+
 
 2) Documentroot:
 Esta directiva establece el directorio desde el cual httpd servirán los archivos. A menos que coincida con una directiva como Alias, el servidor agrega la ruta desde la URL solicitada a la raíz del documento para hacer la ruta al documento. 
+DocumentRoot /usr/web
 
 3) Include:
 Esta directiva permite la inclusión de otros archivos de configuración dentro de los archivos de configuración del servidor.
+Include /usr/local/apache2/conf/ssl.conf
+Include /usr/local/apache2/conf/vhosts/*.conf
+o
+Include conf/ssl.conf
+Include conf/vhosts/*.conf
 
 Los fnmatch()caracteres comodín de estilo Shell ( ) se pueden usar en el nombre del archivo o en las partes del directorio de la ruta para incluir varios archivos a la vez, en orden alfabético. Además, si Includeapunta a un directorio, en lugar de a un archivo, Apache httpd leerá todos los archivos en ese directorio y cualquier subdirectorio. Sin embargo, no se recomienda incluir directorios completos, ya que es fácil dejar accidentalmente los archivos temporales en un directorio que puede hacer httpdque falle. En su lugar, le recomendamos que utilice la sintaxis de comodines que se muestra a continuación para incluir archivos que coincidan con un patrón en particular, como * .conf, por ejemplo.
 
@@ -18,9 +28,13 @@ La ruta del archivo especificada puede ser una ruta absoluta o puede ser relativ
 
 4) IncludeOptional: 
 Esta directiva permite la inclusión de otros archivos de configuración dentro de los archivos de configuración del servidor. Funciona de manera idéntica a la Includedirectiva, pero se ignorará silenciosamente (en lugar de causar un error) si se usan comodines y no coinciden con ningún archivo o directorio o si no existe una ruta de archivo en el sistema de archivos.
+IncludeOptional conf/ssl.conf
+IncludeOptional conf/vhosts/*.conf
 
 5) Listen:
 La Listendirectiva le indica a Apache httpd que solo escuche direcciones IP o puertos específicos; de forma predeterminada, responde a las solicitudes en todas las interfaces IP. Listen Ahora es una directiva obligatoria. Si no está en el archivo de configuración, el servidor no podrá iniciarse. Este es un cambio de las versiones anteriores de Apache httpd.
+Listen 80
+Listen 192.170.2.1:80
 
 La Listendirectiva le dice al servidor que acepte las solicitudes entrantes en el puerto especificado o la combinación de dirección y puerto. Si solo se especifica un número de puerto, el servidor escucha el puerto dado en todas las interfaces. Si se proporciona una dirección IP y un puerto, el servidor escuchará en el puerto y la interfaz dados.
 
@@ -28,22 +42,32 @@ Se Listenpueden usar varias directivas para especificar un número de direccione
 
 6) PidFile:
 La PidFiledirectiva establece el archivo en el que el servidor registra el ID de proceso del daemon. Si el nombre del archivo no es absoluto, entonces se asume que es relativo al ServerRoot.
+PidFile /var/run/apache.pid
 
 7) ServerAdmin: https://httpd.apache.org/docs/2.4/mod/core.html#serveradmin
 Los ServerAdminconjuntos de la dirección de contacto que el servidor incluye en los mensajes de error se devuelve al cliente. Si el httpdno reconoce el argumento suministrado como una URL, asume que es una dirección de correo electrónico y la añade mailto:en los destinos de hipervínculo. Sin embargo, se recomienda usar una dirección de correo electrónico, ya que hay muchos scripts CGI que hacen esa suposición. Si desea utilizar una URL, debería apuntar a otro servidor bajo su control. De lo contrario, los usuarios no podrán contactarlo en caso de errores.
+ServerAdmin www-admin@foo.example.com
 
 8) ServerName: https://httpd.apache.org/docs/2.4/mod/core.html#servername
 La ServerName directiva establece el esquema de solicitud, el nombre de host y el puerto que el servidor utiliza para identificarse. ServerName [scheme://]domain-name|ip-address[:port]
-
 ServerName se utiliza (posiblemente junto con ServerAlias) para identificar de forma única un host virtual, cuando se usan hosts virtuales basados ​​en nombres .
-
 Además, esto se usa cuando se crean direcciones URL de redireccionamiento autorreferenciales cuando UseCanonicalNamese establece en un valor no predeterminado.
+ServerName server.domain.com
 
 9) ServerRoot: https://httpd.apache.org/docs/2.4/mod/core.html#serverroot
 La ServerRootdirectiva establece el directorio en el que vive el servidor. Normalmente contendrá los subdirectorios conf/y logs/. Las rutas relativas en otras directivas de configuración (como Includeo LoadModule, por ejemplo) se toman como relativas a este directorio.
+ServerRoot /home/httpd
 
 10) <VirtualHost>: https://httpd.apache.org/docs/2.4/mod/core.html#virtualhost
 <VirtualHost>y </VirtualHost>se utilizan para incluir un grupo de directivas que se aplicarán solo a un host virtual en particular. Se puede utilizar cualquier directiva permitida en un contexto de host virtual. Cuando el servidor recibe una solicitud de un documento en un host virtual en particular, utiliza las directivas de configuración adjuntas en la <VirtualHost> sección. Addr puede ser cualquiera de los siguientes, opcionalmente seguido de dos puntos y un número de puerto (o *):
+<VirtualHost 10.1.2.3>
+ServerAdmin webmaster@host.example.com
+DocumentRoot /www/docs/host.example.com
+ServerName host.example.com
+ErrorLog logs/host.example.com-error_log
+TransferLog logs/host.example.com-access_log
+</VirtualHost>
+
 
 La dirección IP del host virtual;
 Un nombre de dominio completo para la dirección IP del host virtual (no recomendado);
@@ -52,17 +76,27 @@ La cadena _default_, que es un alias para*
 
 11) ServerAlias: https://httpd.apache.org/docs/2.4/mod/core.html#serveralias
 La ServerAlias directiva establece los nombres alternativos para un host, para su uso con hosts virtuales basados ​​en nombres . El ServerAliaspuede incluir comodines, si es apropiado.
-
 Los hosts virtuales basados ​​en el nombre para el conjunto de <virtualhost>s de mejor coincidencia se procesan en el orden en que aparecen en la configuración. La primera coincidencia ServerNameo ServerAliasse usa, sin una prioridad diferente para los comodines (ni para ServerName vs. ServerAlias).
-
 La lista completa de nombres en la <VirtualHost> directiva se trata como un (no comodín) ServerAlias.
+<VirtualHost *:80>
+ServerName server.domain.com
+ServerAlias server server2.domain.com server2
+ServerAlias *.example.com
+UseCanonicalName Off
+# ...
+</VirtualHost>
 
 12) Alias: https://httpd.apache.org/docs/2.4/mod/mod_alias.html#alias
 La Alias directiva permite que los documentos se almacenen en el sistema de archivos local que no sea bajo el DocumentRoot. Las URL con una ruta (% -decoded) que comienza con la ruta URL se asignarán a los archivos locales que comienzan con la ruta del directorio . La ruta de la URL distingue entre mayúsculas y minúsculas, incluso en sistemas de archivos que no distinguen entre mayúsculas y minúsculas.
+Alias "/image" "/ftp/pub/image"
 
 13) Directiva <Directory>: https://httpd.apache.org/docs/2.4/mod/core.html#directory
-<Directory>y </Directory>se utilizan para incluir un grupo de directivas que se aplicarán solo al directorio nombrado, a los subdirectorios de ese directorio y a los archivos dentro de los directorios respectivos. Se puede utilizar cualquier directiva permitida en un contexto de directorio. La ruta del directorio es la ruta completa a un directorio o una cadena de comodines que utiliza la coincidencia de estilo de shell de Unix. En una cadena de comodines, ?coincide con cualquier carácter individual y *coincide con cualquier secuencia de caracteres. También puede utilizar []rangos de caracteres. Ninguno de los comodines coincide con un carácter `/ ', por <Directory "/*/public_html">lo que no coincidirá /home/user/public_html, pero <Directory "/home/*/public_html">sí coincidirá. Ejemplo:
+<Directory>y </Directory>se utilizan para incluir un grupo de directivas que se aplicarán solo al directorio nombrado, a los subdirectorios de ese directorio y a los archivos dentro de los directorios respectivos. Se puede utilizar cualquier directiva permitida en un contexto de directorio. La ruta del directorio es la ruta completa a un directorio o una cadena de comodines que utiliza la coincidencia de estilo de shell de Unix. En una cadena de comodines, ?coincide con cualquier carácter individual y *coincide con cualquier secuencia de caracteres. También puede utilizar []rangos de caracteres. Ninguno de los comodines coincide con un carácter `/ ', por <Directory "/*/public_html">lo que no coincidirá /home/user/public_html, pero <Directory "/home/*/public_html">sí coincidirá. 
 
+<Directory /usr/local/httpd/htdocs>
+Options Indexes FollowSymLinks
+AllowOverride None
+</Directory>
 
 
 
