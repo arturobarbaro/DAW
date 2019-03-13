@@ -1,0 +1,12 @@
+Requisitos daw:
+https://www.uml-diagrams.org/deployment-diagrams-overview.html: Segundo diagrama( es capa de negocio y datos)
+http, https, ssh, ftp en diagrama: https://www.uml-diagrams.org/web-application-load-balancing-uml-deployment-diagram-example.html?context=depl-examples
+
+diagrama en entornos de dasarrolo y de produccion.
+entornos de desarrollo, ... cualquier herramienta de desarrollo o incluso de dibujo vectorial, de control de versiones.
+
+Nivel de protocolos:
+(protocolos en dev, prod(http)...)
+
+COMO MEJORA:
+Usar certificados
