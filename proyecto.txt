@@ -10,3 +10,6 @@ Nivel de protocolos:
 
 COMO MEJORA:
 Usar certificados
+
+TAREAS:
+listado de herramientas y arquitectura de nuestro sistema con un diagrama de despliegue (uml)
