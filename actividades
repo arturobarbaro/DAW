@@ -1,8 +1,0 @@
-ACTIVIDADES 7 DE ENERO DAW:
-Comprobar el uso de Options con Indexes, Follow... Y Symlinks...
-Crear un directoriio llamado recetas con ficheros de texto usuario: superman cl:cine.
-El acceso sera exclusivo para superman
---Opcional
-Usar la directiva limit para evitar que superman pueda hacer POST <Limit POST>
-
-Estudiar directiva limit con dos ejemplos
