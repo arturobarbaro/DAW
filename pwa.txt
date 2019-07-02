@@ -1,0 +1,50 @@
+¿Cuál es la propiedad del archivo manifest que indica la url de inicio de la aplicación?
+ start_url
+
+¿Quién es el encargado de recibir y mostar las notificaciones push?
+ El service worker
+
+¿Qué puede indicar un código de respuesta 404 en el Web Push Protocol Response?
+ La subscripción no existe
+
+¿Cuántos tipos de sincronización en background existen?
+ 2
+
+¿Cómo se muestra una notificación no persistente?
+ new Notification('Título de la notificación', { opciones });
+
+¿Qué características posee una aplicación web progresiva?
+ Todas las anteriores son correctas
+
+¿Cuál es la propiedad del archivo manifest que indica el color de fondo de la pantalla de "splash"?
+ background-color
+
+¿Es necesario que el usuario nos dé permiso para mostrar notificaciones?
+ Sí
+
+¿Cómo se consigue hacer nuestra aplicación instalable?
+ Mediante un archivo manifest.
+
+¿Qué propiedades tiene cada objeto action de una notificacion?
+ title
+ icon
+
+¿Qué tipo de notificaciones están asociadas a un Service Worker?
+ Notificaciones push persistentes
+
+
+
+mal:
+
+
+¿Cuál de estas propiedades no forma parte de las opciones de las notificaiones push?
+ body
+
+¿Cuál es el código de respuesta que indica que una notificación se ha enivado correctamente?
+ 200
+
+¿Qué elemento se utilizar para encriptar las notificaciones?
+ Certificado SSL
+
+¿Cuál de los siguientes no es un header de Web Push Protocol?
+ Urgency
