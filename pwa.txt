@@ -1,3 +1,22 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+¿Cuál de estas características aplica a las notificaciones?
+ Todas son correctas
+
+¿Cómo se muestra una notificación persistente?
+ self.registration.showNotification('Título de la notificación', { opciones });
+
 ¿Cuál es la propiedad del archivo manifest que indica la url de inicio de la aplicación?
  start_url
 
@@ -32,19 +51,29 @@
 ¿Qué tipo de notificaciones están asociadas a un Service Worker?
  Notificaciones push persistentes
 
+¿Cuál es el código de respuesta que indica que una notificación se ha enivado correctamente?
+ 201
+
+
+
 
 
 mal:
 
+¿Con qué propiedad se crean botones en la notificación para dar al usuario opciones varidas de interactuar con la notificación?
+ clicks
+
+¿Cuál es el mejor momento para mostrar el banner de instalación?
+ Nada más entrar en la aplicación
 
 ¿Cuál de estas propiedades no forma parte de las opciones de las notificaiones push?
  body
-
-¿Cuál es el código de respuesta que indica que una notificación se ha enivado correctamente?
- 200
+ timestamp
 
 ¿Qué elemento se utilizar para encriptar las notificaciones?
  Certificado SSL
+ Cifrado simétrico
 
 ¿Cuál de los siguientes no es un header de Web Push Protocol?
  Urgency
+ Encription
