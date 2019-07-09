@@ -11,69 +11,66 @@
 
 
 
-¿Cuál de estas características aplica a las notificaciones?
+Â¿CuÃ¡l de estas caracterÃ­sticas aplica a las notificaciones?
  Todas son correctas
 
-¿Cómo se muestra una notificación persistente?
- self.registration.showNotification('Título de la notificación', { opciones });
+Â¿CÃ³mo se muestra una notificaciÃ³n persistente?
+ self.registration.showNotification('TÃ­tulo de la notificaciÃ³n', { opciones });
 
-¿Cuál es la propiedad del archivo manifest que indica la url de inicio de la aplicación?
+Â¿CuÃ¡l es la propiedad del archivo manifest que indica la url de inicio de la aplicaciÃ³n?
  start_url
 
-¿Quién es el encargado de recibir y mostar las notificaciones push?
+Â¿QuiÃ©n es el encargado de recibir y mostar las notificaciones push?
  El service worker
 
-¿Qué puede indicar un código de respuesta 404 en el Web Push Protocol Response?
- La subscripción no existe
+Â¿QuÃ© puede indicar un cÃ³digo de respuesta 404 en el Web Push Protocol Response?
+ La subscripciÃ³n no existe
 
-¿Cuántos tipos de sincronización en background existen?
+Â¿CuÃ¡ntos tipos de sincronizaciÃ³n en background existen?
  2
 
-¿Cómo se muestra una notificación no persistente?
- new Notification('Título de la notificación', { opciones });
+Â¿CÃ³mo se muestra una notificaciÃ³n no persistente?
+ new Notification('TÃ­tulo de la notificaciÃ³n', { opciones });
 
-¿Qué características posee una aplicación web progresiva?
+Â¿QuÃ© caracterÃ­sticas posee una aplicaciÃ³n web progresiva?
  Todas las anteriores son correctas
 
-¿Cuál es la propiedad del archivo manifest que indica el color de fondo de la pantalla de "splash"?
+Â¿CuÃ¡l es la propiedad del archivo manifest que indica el color de fondo de la pantalla de "splash"?
  background-color
 
-¿Es necesario que el usuario nos dé permiso para mostrar notificaciones?
- Sí
+Â¿Es necesario que el usuario nos dÃ© permiso para mostrar notificaciones?
+ SÃ­
 
-¿Cómo se consigue hacer nuestra aplicación instalable?
+Â¿CÃ³mo se consigue hacer nuestra aplicaciÃ³n instalable?
  Mediante un archivo manifest.
 
-¿Qué propiedades tiene cada objeto action de una notificacion?
+Â¿QuÃ© propiedades tiene cada objeto action de una notificacion?
  title
  icon
 
-¿Qué tipo de notificaciones están asociadas a un Service Worker?
+Â¿QuÃ© tipo de notificaciones estÃ¡n asociadas a un Service Worker?
  Notificaciones push persistentes
 
-¿Cuál es el código de respuesta que indica que una notificación se ha enivado correctamente?
+Â¿CuÃ¡l es el cÃ³digo de respuesta que indica que una notificaciÃ³n se ha enivado correctamente?
  201
 
+Â¿CuÃ¡l de estas propiedades no forma parte de las opciones de las notificaiones push?
+ header
 
+Â¿CuÃ¡l es el mejor momento para mostrar el banner de instalaciÃ³n?
+ No podemos elegir el momento en el que el banner se mostrarÃ¡ al usuario
 
 
 
 mal:
 
-¿Con qué propiedad se crean botones en la notificación para dar al usuario opciones varidas de interactuar con la notificación?
+Â¿Con quÃ© propiedad se crean botones en la notificaciÃ³n para dar al usuario opciones varidas de interactuar con la notificaciÃ³n?
  clicks
 
-¿Cuál es el mejor momento para mostrar el banner de instalación?
- Nada más entrar en la aplicación
-
-¿Cuál de estas propiedades no forma parte de las opciones de las notificaiones push?
- body
- timestamp
-
-¿Qué elemento se utilizar para encriptar las notificaciones?
+Â¿QuÃ© elemento se utilizar para encriptar las notificaciones?
  Certificado SSL
- Cifrado simétrico
+ Cifrado simÃ©trico
 
-¿Cuál de los siguientes no es un header de Web Push Protocol?
+Â¿CuÃ¡l de los siguientes no es un header de Web Push Protocol?
  Urgency
  Encription
