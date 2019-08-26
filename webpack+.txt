@@ -1,0 +1,53 @@
+Para empaquetar los módulos...
+ Webpack va navegando a través de todos los imports y generando un grafo de dependencias.
+
+¿Cuál es la diferencia entre el style-loader y el css-loader?
+ El css-loader resuelve los @import y url() y el style-loader injecta el código CSS en una etiqueta style en el DOM.
+
+¿Qué es Webpack DevServer?
+ Un servidor de desarrollo que se ejecuta en memoria y actualiza el navegador automaticamente.
+
+Con Webpack podemos alternar entre diferentes ficheros de configuración...
+ Pasando la opción --config y el fichero de configuración al comando de Webpack.
+
+El proceso de ejecución de Webpack empieza siempre...
+ En los entry points. Despues Webpack resulve los ficheros, transforma el código a través de los loaders, se ejecutan los plugins y finalmente se genera el bundle.
+
+¿Qué necesitamos para usar Webpack?
+  Nodejs
+
+¿Qué es un Plugin?
+ Extienden la funcionalidad de Webpack, haciendo todo lo que un loader no puede.
+
+¿Cuáles son las dos formas de generar source maps?
+ Junto con los ficheros generados con Webpack y en ficheros .map separados.
+
+¿Por qué decimos que Webpack hace las veces de un Task runner?
+ Porque gracias a los plugins nos permiten realizar tareas que antes teniamos que hacer con Gulp.
+
+¿Cómo podemos activar HMR?
+ Estableciendo la opción --hot al ejecutar el DevServer.
+
+Con respecto a los loaders en Webpack...
+ Pueden transformar módulos en otro lenguaje a Javascript.
+ Nos permite cargar ficheros CSS dentro de nuestros módulos Javascript.
+
+¿Qué es Webpack?
+ Un empaquetador de módulos
+
+¿Cuál es el comando para exponer la interface de HMR en nuestros módulos?
+ webpack-dev-server --hot
+
+Para ejecutar Webpack por consola necesitamos:
+ Instalar los paquetes webpack y webpack-cli con npm.
+
+¿Cómo podemos obtener Webpack?
+ Con npm.
+
+¿Qué versión de Webpack hemos estado usando en el curso?
+ Webpack 4+
+
+Una vez instalado un Plugin, ¿Cómo lo cargamos en el webpack.config.js?
+ Estableciendo la propiedad plugins a un array y cada elemento será una instancia del plugin.
+
+
