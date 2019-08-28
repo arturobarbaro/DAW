@@ -1,0 +1,116 @@
+
+
+Supongamos que hemos creado un par de archivos en nuestro Working Directory. Aún no los hemos agregado a la Staging Area con el comando git add. Por tanto, se encuentran en estado untracked. 
+¿Con qué comando puedo visualizar en el Working Directory el estado de los archivos pendientes de agregar y el estado de los que se han agregado y están preparados (staged) a falta de confirmar (commit)?
+ `git status`
+
+
+¿Cuáles de las siguientes afirmaciones son verdaderas git diff y lanzar git diff --cached?
+ El primero compara el Working Directory con la versión del commitid que digamos. El segundo sólo compara aquellos archivos de staging que le digamos (es decir, ficheros a los que hayamos incluido con el comando `git add`)
+ El comando admite un `commit-id`contra el que analizar las diferencias, de manera que `git diff`es equivalente a `git diff HEAD`de igual manera que `git diff --cached HEAD`es equivalente a `git diff --cached` En resumen, HEAD es el valor por defecto.
+
+¿Cómo puedo subir los cambios efectuados en mi rama remota de repositorio con el que me he vinculado vía git remote add origin o vía el comando git clone ?
+ `git push <remote_name> <branch_name>`
+
+El comando git cherry-pick se utiliza para tomar el cambio introducido en un único commit de Git y tratar de volver a introducirlo como un nuevo commit en la rama donde estás actualmente. Esto puede ser útil para escoger solamente uno o dos commits de una rama individual en lugar de fusionar la rama que contiene todos los cambios. Es decir, no me traigo un "pull" de todos los archivos, sino solo de los cambios concretos que yo picotee (cherry-pick) del commit concreto que yo elija.
+Ejemplo de formato de uso: git cherry-pick origin/master 5d5bf61
+¿Cuáles de las siguientes afirmaciones son ciertas?
+ Todas son afirmaciones ciertas.
+
+Tras trabajar en mi proyecto versionado con GIT durante horas, acabo de borrar A PROPÓSITO con git rm un fichero que iba aprobado en mi última revisión (y en todas las anteriores).
+¿Con cuál/cuáles del/de los comando/s siguiente/s obtendré alguna/s diferencia/s respecto a lo que se encuentre en el área de aprobación o commit?
+ `git diff`
+
+¿Cuál es el comando para elegir como herramienta de gestión de diferencias de ficheros de git a TKDIFF?
+ `git config --global diff.tool tkdiff`
+
+¿Alguno de estos comandos permite modificar la salida de logs de git? Se pretende obtener el hashid, el nombre del autor de la modificación, de la referencia de timestamp de la misma y del texto de ayuda o asunto que etiqueta a la modificación?
+ git log --pretty="%h %an %ar - %s"
+ git log --pretty=format:"%h %an %ar - %s"
+
+Muchas veces, cuando has estado trabajando en una parte de tu proyecto, las cosas se encuentran desordenadas y quieres cambiar de ramas por un momento para trabajar en algo más. El problema es que no quieres hacer un commit de un trabajo que va por la mitad, así puedes volver a ese punto más tarde. La respuesta a ese problema es el comando git stash, que efectúa un "guardado rápido", como un portapapeles, que luego puedes utilizar.
+Indique cuál de las siguientes afirmaciones es cierta respecto al comando git stash:
+ En cualquier momento de mi proyecto, y en cualquier rama, puedo lanzar un `git stash`y efectuará un guardado rápido (como una instantánea al vuelo) de lo que tengo en un instante dado.
+ Mediante el comando `git stash apply`puedo recuperar aquello que haya guardado rápidamente con el comando `git stash`y aplicarlo en mi directorio de trabajo.
+
+¿Cuáles son las tres secciones principales de un proyecto GIT?
+ Working Directory, Staging Area, directorio .git
+
+
+Si quisiéramos DESHACER o enmendar el último commit hecho porque en dicho cambio se me olvidó agregar algún fichero o quizás cambiar el mensaje de commit... ¿Qué comando sería el más apropiado para ello?
+ `git commit --amend`
+
+Cuáles de las siguientes afirmaciones acerca del comando git blame son FALSAS?
+ Ninguna de las afirmaciones es FALSA.
+
+
+
+
+
+MAL:
+
+¿Qué efecto tendría este comando: git push origin :mi-rama ?
+ Sube los cambios de mi-rama al repositorio remoto.
+
+¿Cuál o cuales de las siguientes afirmaciones es/son falsa/s?
+ Con `git diff` podemos ver la diferencia de un archivo *untracked* respecto a la versión más reciente del mismo archivo ya aprobada anteriormente (*commited*)
+
+¿Qué efecto tendría el comando: git branch -D mi-rama ?
+ Borraría la rama remota mi-rama.
+
+Tras trabajar en mi proyecto versionado con GIT durante horas, acabo de borrar por error un fichero que iba aprobado en mi última revisión (y en todas las anteriores).
+¿Qué comando es el apropiado para restaurarlo?
+ `git checkout -- <file>`
+
+Supongamos que acabo de realizar unos cambios en mí working directory. Agrego a staging los ficheros que necesito, y hago commit. Justo después de hacerlo, caigo en la cuenta justo después de procesarse el commit, que olvidé agregar un fichero que debería haber ido en esa revisión. ¿Qué solución es la más apropiada?
+ Puedo hacer un `git revert HEAD`y luego volver a meter todos los cambios en todos los archivos y esta vez, acordarme de incluir todos los ficheros al siguiente commit. Además, el propio revert introduce un nuevo hashid identificativo de una nueva revisión.
+
+Tengo un Working Directory con los archivos file1, file2 y fileTengo algunos commits. Ejecuto un git rm * pero no hago commit (por tanto, tengo ese borrado en staging).
+Si ejecuto un git checkout -- . sigo sin visualizar mis archivos en Working Directory. ¿Por qué?
+ Porque ese comando no me trae los archivos de vuelta; sirve para conmutar de rama exclusivamente.
+
+Tengo el hashid de una revisión o commit concreto gracias a git log. Quiero ver todos los cambios en todos los ficheros de esa revisión. ¿Qué comando/s puedo usar para saberlo?
+ `git diff <hashid>`
+
+80% completado
+Supongamos que acabo de crear un fichero en mi Working Directory llamado new-file.
+
+Ejecutamos git add new-file
+
+La salida de un git status es: 
+
+On
+ branch master
+Your branch 
+is
+ ahead 
+of
+'origin
+/master' by 
+2
+ commits.
+  (
+use
+"git push"
+to
+ publish your local commits)
+
+Changes 
+to
+ be committed:
+  (
+use
+"git reset HEAD 
+..." to unstage)
+
+        new file:   new-file
+
+
+Sin querer, ejecuto el comando rm new-file
+
+Como nunca he realizado un commit, no tenemos el fichero en el área de confirmación (directorio .git), aunque sí lo tengo en el área de staging. ¿Con qué comando podría recuperar el fichero que se encuentra en staging no perder mi trabajo?
+ git checkout -- new-file
+
+Las ramas se crean basándonos en otra rama, generalmente master. El comando: git branch <new_branch> <starting_branch> toma una rama existente y crea una rama separada para trabajar en ella.
+Indica cuál de las siguientes afirmaciones sobre git branch es falsa:
+  Cuando ejecuto un `git branch <nombre_rama>` todo el contenido de mi Working Directory queda con la foto en la que haya dejado mi rama, pudiendo cambiar todos los archivos en cada ejecución de cada `git branch`, lo cual resulta muy llamativo y sorprendente las primeras veces
