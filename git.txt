@@ -14,7 +14,13 @@
 
 
 
+Las ramas se crean basándonos en otra rama, generalmente master. El comando: git branch <new_branch> <starting_branch> toma una rama existente y crea una rama separada para trabajar en ella.
+Indica cuál de las siguientes afirmaciones sobre git branch es falsa:
+ Todas son ciertas.
 
+Tengo un Working Directory con los archivos file1, file2 y fileTengo algunos commits. Ejecuto un git rm * pero no hago commit (por tanto, tengo ese borrado en staging).
+Si ejecuto un git checkout -- . sigo sin visualizar mis archivos en Working Directory. ¿Por qué?
+ Porque no puede estar en 2 a la vez
 
 El comando git diffpermite analizar diferencias de los ficheros con los que trabajamos, lo que nos ayuda a encontrar errores. El comando git diff HEAD~2 HEAD
  Muestra las diferencias entre las versiones de archivos de la instantánea HEAD versus dos versiones atrás de HEAD.
@@ -92,9 +98,6 @@ Ejemplo de formato de uso: git cherry-pick origin/master 5d5bf61
 ¿Cuáles de las siguientes afirmaciones son ciertas?
  Todas son afirmaciones ciertas.
 
-Tras trabajar en mi proyecto versionado con GIT durante horas, acabo de borrar A PROPÓSITO con git rm un fichero que iba aprobado en mi última revisión (y en todas las anteriores).
-¿Con cuál/cuáles del/de los comando/s siguiente/s obtendré alguna/s diferencia/s respecto a lo que se encuentre en el área de aprobación o commit?
- `git diff`
 
 ¿Cuál es el comando para elegir como herramienta de gestión de diferencias de ficheros de git a TKDIFF?
  `git config --global diff.tool tkdiff`
@@ -127,36 +130,33 @@ MAL:
 ¿Qué efecto tendría este comando: git push origin :mi-rama ?
  Sube los cambios de mi-rama al repositorio remoto.
  Sube los cambios de mi-rama al repositorio remoto y los fusiona con la rama master.
+ Ninguno de las opciones es correcta.
 
 ¿Cuál o cuales de las siguientes afirmaciones es/son falsa/s?
  Con `git diff` podemos ver la diferencia de un archivo *untracked* respecto a la versión más reciente del mismo archivo ya aprobada anteriormente (*commited*)
  Puedo pasar al comando `git diff` como argumento el hash-id concreto del versionado de un archivo, junto con el nombre de ese archivo, para que lo compare con ése mismo archivo modificado y que en este momento se encuentre en estado *untracked*.
+ Con `git difftool` podemos ver la diferencia de un archivo *untracked* respecto a la versión más reciente del mismo archivo ya aprobada anteriormente (*commited*) con una herramienta de nuestra elección
 
 ¿Qué efecto tendría el comando: git branch -D mi-rama ?
  Borraría la rama remota mi-rama.
  Borraría la rama local mi-rama.
+ Trabajaría con la rama en estado <u>D</u>etached o desconectado.
 
 Tras trabajar en mi proyecto versionado con GIT durante horas, acabo de borrar por error un fichero que iba aprobado en mi última revisión (y en todas las anteriores).
 ¿Qué comando es el apropiado para restaurarlo?
  `git checkout -- <file>`
  `git commit --restore <file>`
+ `git restore <file>`
 
 Supongamos que acabo de realizar unos cambios en mí working directory. Agrego a staging los ficheros que necesito, y hago commit. Justo después de hacerlo, caigo en la cuenta justo después de procesarse el commit, que olvidé agregar un fichero que debería haber ido en esa revisión. ¿Qué solución es la más apropiada?
  Puedo hacer un `git revert HEAD`y luego volver a meter todos los cambios en todos los archivos y esta vez, acordarme de incluir todos los ficheros al siguiente commit. Además, el propio revert introduce un nuevo hashid identificativo de una nueva revisión.
 
-Tengo un Working Directory con los archivos file1, file2 y fileTengo algunos commits. Ejecuto un git rm * pero no hago commit (por tanto, tengo ese borrado en staging).
-Si ejecuto un git checkout -- . sigo sin visualizar mis archivos en Working Directory. ¿Por qué?
- Porque ese comando no me trae los archivos de vuelta; sirve para conmutar de rama exclusivamente.
-
-Las ramas se crean basándonos en otra rama, generalmente master. El comando: git branch <new_branch> <starting_branch> toma una rama existente y crea una rama separada para trabajar en ella.
-Indica cuál de las siguientes afirmaciones sobre git branch es falsa:
-  Cuando ejecuto un `git branch <nombre_rama>` todo el contenido de mi Working Directory queda con la foto en la que haya dejado mi rama, pudiendo cambiar todos los archivos en cada ejecución de cada `git branch`, lo cual resulta muy llamativo y sorprendente las primeras veces
- Para moverme a la rama que desee, una vez creada, lanzaría `git branch <nombre_rama>
-
-
 Descubre la afirmación falsa sobre GIT:
  GIT es software libre
 
+Tras trabajar en mi proyecto versionado con GIT durante horas, acabo de borrar A PROPÓSITO con git rm un fichero que iba aprobado en mi última revisión (y en todas las anteriores).
+¿Con cuál/cuáles del/de los comando/s siguiente/s obtendré alguna/s diferencia/s respecto a lo que se encuentre en el área de aprobación o commit?
+ `git diff`
 
 El comando que me permite revertir todos los cambios producidos entre la versión más reciente aprobada y las dos anteriores es:
  git revert HEAD~2...HEAD~1
