@@ -131,22 +131,27 @@ MAL:
  Sube los cambios de mi-rama al repositorio remoto.
  Sube los cambios de mi-rama al repositorio remoto y los fusiona con la rama master.
  Ninguno de las opciones es correcta.
+ Borra la rama remota identificada por el nombre mi-rama.
 
 ¿Cuál o cuales de las siguientes afirmaciones es/son falsa/s?
  Con `git diff` podemos ver la diferencia de un archivo *untracked* respecto a la versión más reciente del mismo archivo ya aprobada anteriormente (*commited*)
  Puedo pasar al comando `git diff` como argumento el hash-id concreto del versionado de un archivo, junto con el nombre de ese archivo, para que lo compare con ése mismo archivo modificado y que en este momento se encuentre en estado *untracked*.
  Con `git difftool` podemos ver la diferencia de un archivo *untracked* respecto a la versión más reciente del mismo archivo ya aprobada anteriormente (*commited*) con una herramienta de nuestra elección
+ Todas las opciones son falsas.
+
 
 ¿Qué efecto tendría el comando: git branch -D mi-rama ?
  Borraría la rama remota mi-rama.
  Borraría la rama local mi-rama.
  Trabajaría con la rama en estado <u>D</u>etached o desconectado.
+ Devolvería un error. El comando de borrado de ramas locales tiene el flag `-d`en lugar de `-D`.
 
 Tras trabajar en mi proyecto versionado con GIT durante horas, acabo de borrar por error un fichero que iba aprobado en mi última revisión (y en todas las anteriores).
 ¿Qué comando es el apropiado para restaurarlo?
  `git checkout -- <file>`
  `git commit --restore <file>`
  `git restore <file>`
+  `git amend <file>`
 
 Supongamos que acabo de realizar unos cambios en mí working directory. Agrego a staging los ficheros que necesito, y hago commit. Justo después de hacerlo, caigo en la cuenta justo después de procesarse el commit, que olvidé agregar un fichero que debería haber ido en esa revisión. ¿Qué solución es la más apropiada?
  Puedo hacer un `git revert HEAD`y luego volver a meter todos los cambios en todos los archivos y esta vez, acordarme de incluir todos los ficheros al siguiente commit. Además, el propio revert introduce un nuevo hashid identificativo de una nueva revisión.
@@ -160,3 +165,4 @@ Tras trabajar en mi proyecto versionado con GIT durante horas, acabo de borrar A
 
 El comando que me permite revertir todos los cambios producidos entre la versión más reciente aprobada y las dos anteriores es:
  git revert HEAD~2...HEAD~1
+ git revert HEAD...HEAD~2
