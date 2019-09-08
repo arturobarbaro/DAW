@@ -1,0 +1,76 @@
+BIEN:
+
+Elige de entre las opciones siguientes, la afirmación correcta sobre PostCSS:
+ PostCss destaca por su modularidad, permitiéndote tener control absoluto sobre el pipeline de transformaciones de un documento CSS.
+
+Es necesario PostCSS para el uso de variables o custom-properties?
+ Estrictamente hablando no es necesario, pero puede ayudar en casos de soporte de navegadores antiguos
+
+Elige de entre las opciones siguientes, la afirmación correcta sobre PostCSS:
+ Se integra perfectamente con otros Gestores de tareas como Gulp, Grunt, Brocolli, etc.
+
+Qué módulo basado en postCSS permite usar a día de hoy especificaciones de CSS que están en la fase de Candidate Recommendation?
+ CssNext
+
+En cuanto al tratamiento del problema del Scope en CSS, PostCSS:
+ Dispone de módulos que siguen metodologías como BEM, Suit u otras que ayudan a evitar problemas de scope.
+
+¿Con qué módulo de PostCSS puedes sacar estadísticas del uso de selectores o especificidad de ellos?
+ CssStats
+
+Elige de entre las opciones siguientes, la afirmación correcta sobre PostCSS
+ PostCSS es independiente del sistema Operativo, basta con tener instalado NodeJS en tu ordenador.
+
+¿En qué se basan muchos de los módulos de PostCSS para transformar los CSS fuente en base al soporte de navegadores concretos?
+ BrowserList
+
+¿Qué formas de optimizar un fichero css hay a parte de la reducción de espacios?
+Elige la opción más apropiada
+ Formas abreviadas de ciertas propiedades, como padding y margin. También un color se puede especificar sólo con 3 dígitos hexadecimales.
+
+¿ En qué puede ayudarte PostCSS y los módulos de Linting ?
+ Normalizar y estandarizar el uso de valores de medida, y seguir una guía de estilo con coherencia y bien formateada.
+
+En cuanto a otros Preprocesadores como SASS , LESS o Stylus
+ PostCSS puede trabajar con ellos, no hay porqué descartar todo el trabajo que tenías ya realizado en SASS , Stylus o LESS
+
+¿PostCSS es capaz de reescribir código CSS automáticamente ?
+ Sí, ya que hace uso de AST, que permiten hacer cadenas de transformación y pueden detectar cambios en la esctructura de tu CSS.
+
+Qué ventajas aporta PostCSS en un proyecto web muy grande:
+ Te permite automatizar muchos de las tareas previas a la puesta en producción de un sitio web.
+
+¿Podemos definir nuevos atributos y propiedades CSS con PostCSS?
+ Sí, ya que podemos escribir módulos de PostCSS que entiendan esos atributos , y que los transformen a CSS éstandar.
+
+¿Se pueden usar mixins en PostCSS?
+ Sí
+
+¿Necesitas conocer un preprocesador (Sass,Less, stylus...) para usar PostCss?
+ No
+
+¿Influye el orden de procesadores en PostCSS?
+ Sí , ya que cada transformación o módulo de PostCSS esperará una serie de condiciones y formato sobre el que trabajar.
+
+PostCSS hace uso de un AST, para:
+ Poder manipular, alterar y transformar un fichero CSS , con un completo control sobre cada regla, identificador, etc.
+
+¿ Puedo debuggear un pipeline con PostCSS ?
+ Sí, y tenemos modúlos como postcss-debug que nos ayudan en esa tarea, aunque podríamos debuggear también sin este módulo.
+
+
+
+
+
+MAL:
+
+
+Elige de entre las opciones siguientes, la afirmación correcta sobre PostCSS
+Sólo se puede usar PostCSS para:
+ Sólo como transpilador, para ir usando nuevas características de CSS
+
+ Prefixing y Linting
+
+
+
+

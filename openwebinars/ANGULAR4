@@ -1,0 +1,123 @@
+¿Qué hace la Async pipe?
+ Permite trabajar con observables y promesas en el template subscribiéndose o llamando a then y reemplazando el valor cuando se recupera.
+
+¿Cuál es la principal diferencia entre Observable.zip vs Observable.combineLatest?
+ zip espera a emitir hasta que no tiene un valor nuevo para todos los observables combinados mientras que combineLatest devuelve todas las posibles combinaciones de los observables combinados
+
+¿Qué hace este código en un formulario orientado a template?
+#f="ngForm" (ngSubmit)="onSubmit(f.value)"
+  No tiene sentido en un formulario orientado a template
+
+¿Están permitidos los efectos secundarios en llamadas a un método a través de event binding?
+ No, para eso está el property data binding
+
+¿Qué buenas prácticas deberíamos aplicar al CoreModule?
+ Definir los servicios globales y prevenir la reimportación
+
+¿Para qué sirve este código?
+{path: 'add-talk', loadChildren: 'app/add-talk/add-talk.module#AddTalkModule'}
+  Para cargar con Lazy Load un módulo
+
+¿Cómo se vincula un FormControl en un formulario reactivo?
+ Inyectando FormBuilder, creando una template reference del form que apunte a una variable y usando ngModel en el input
+
+Las principales diferencias de let con respecto a var son:
+ let tiene block scoping
+ let no hace hoisting, aplican las reglas de la Temporal Dead Zone (TDZ)
+
+Una forma de subscribirse a un Observable es:
+ Con .subscribe(x => console.log(x))
+ Con la pipe async
+
+
+
+
+
+
+
+
+
+¿Cuando deberíamos usar un FeatureModule?
+ Cuando queramos aislar componentes que comparten un caso de uso común, característica de negocio, flujo...
+
+Las principales diferencias del bucle for...of con respecto al for...in son:
+ for...of no itera sobre propiedades heredadas
+ for...of funciona sobre elementos iterables
+
+¿Qué implica que la interpolación sea viva?
+ Que el template se actualiza cuando el valor de la variable del componente cambia.
+
+¿Qué pasos son necesarios para configurar el router?
+ Crear un array de rutas con path y component (o módulo)
+ Importar el RouterModule y configurarlo con forRoot
+
+¿Cuáles de estos conceptos no forman parte de la arquitectura básica de angular?
+ Router, Animations, HTTP
+
+¿Dónde se configura el prefijo global por defecto al crear un componente?
+ En el angular-cli.json
+
+La pipe slice sirve para:
+ Recortar cadenas
+
+¿Qué espera un elemento con el atributo [ngStyle]?
+ Un objeto json con los estilos
+
+¿Cuál es la sintaxis, si existe, para leer el valor de las filas impares y la última en un bucle *ngFor?
+ *ngFor="let talk of talks;let i = index;let odd = odd;let last = last"
+
+¿Qué es y para qué sirve un template reference variable?
+ Es una referencia a un elemento de nuestro template, anotado con #, para poder referenciarlo desde otra parte del template o pasarlo como variable a una invocación de un método
+
+Qué devuelve este código?
+ 2 1 [ 3, 4 ]
+
+¿Qué significa dirty en un formulario?
+ Que el valor de ese campo ha cambiado desde que se cargó inicialmente
+
+¿Qué es una Guard?
+ Una clase que se lanza antes o después de navegar a un componente
+
+
+
+
+
+
+MAL:
+
+¿Para qué sirve Observable.from?
+ Para crear Observables a través de una promesa
+ Para crear Observables a partir de un array
+
+ Para crear Observables a través de una promesa
+ Para crear Observables a partir del spread de un array
+
+Una forma de subscribirse a un Observable es:
+ Con .subscribe(x => console.log(x))
+ Concatenando con otro observable
+
+¿Qué es Inversión de Control (IoC)?
+ Una librería para inyectar dependencias que se utiliza en angular para utilizar los servicios
+
+ Un principio de diseño, que busca escribir código más desacoplado. La inyección de dependencias es un ejemplo de este patrón
+
+Se puede cambiar el nombre de un Input y, si es así, cómo?
+ No, no se puede. El nombre del input es el nombre de la variable del componente hijo
+
+ Sí, cómo argumento a los paréntesis de la anotación, @Input('nuevo_nombre') nombre
+
+¿Qué pasos hacen falta para emitir un valor desde un componente hijo a un componente padre?
+ Utilizar la anotación @Input() y pasar el valor con [nombre]="variable"
+
+ Crear un EventEmitter (@Output() emitter = new EventEmitter()), emitir el valor con emitter.emit() y escuchar el valor desde el padre con (emitter)="metodo"
+
+¿Cómo podemos crear componentes dinámicamente?
+ Mediante un *ngIf
+
+ Usando un ComponentFactoryResolver y un ViewContainerRef
+
+¿Qué significa LIFT?
+ Locate code quickly, Inherit from other components, flatten the structure, test your code
+
+
+

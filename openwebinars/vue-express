@@ -1,0 +1,78 @@
+¿Qué son los magic params?
+ Son paŕametros que se definen en las rutas, y a los cuales podemos acceder después a través de req.params
+
+¿Como trabajamos con ficheros estáticos en Express?
+ Usando un middleware, como express.static
+
+¿Que es Node?
+ Un entorno de ejecución para Javascript
+
+¿Para qué sirve el paquete de NPM morgan?
+ Nos permite parsear a JSON el contenido de las rutas POST
+
+¿Qué hace este código?
+<form class​='ui form' v-on:submit.prevent='onSubmit'>
+ Ejecuta la función onSubmit cuando el usuario ejecuta el submit del formulario, y luego, hace un prevent, para que este no recargue la web
+
+¿Para que sirve el paquete de NPM dotenv?
+ Para definir las variables de entorno que vamos a utilizar en nuestra aplicación
+
+¿Qué necesitamos para empezar a desarrollar con Vue?
+ Nada, Vue en un CDN, y un editor
+
+¿Que es Vue?
+ Un framework progresivo
+
+¿En qué hook del ciclo de vida pondrías una llamada a un servicio externo?
+ created ó mounted
+
+¿Como usarias el método del controlador en la ruta?
+class​ ​RecipesController​ {
+ recipe (req, res, next) {
+ ​return​ res
+ .status(200)
+ .json({ key: ​'value'​ })
+ }
+}
+router.route(​'/recipe'​)
+
+¿Donde definirías tu código CSS en este componente?
+<template>
+<​/template>
+<script>
+export default {
+ name: '​home​'
+}
+</script>
+<style>
+</style>
+  En la etiqueta ​style​, ya sea definiendo ahí los estilos, o utilizando un import
+ .get(...)
+  router.route(‘/recipe’).get(RecipesController.recipe)
+
+¿Qué es un middleware?
+ Funciones que tiene acceso al objeto response, y request y nos permiten ejecutar código antes o
+
+Señala cual de estas, no es una característica principales de NodeJS
+ Orientado a eventos
+
+¿Qué es Express?
+ Un paquete o librería que nos permite hacer webs y API Rest de forma sencilla
+
+¿Porque debemos modularizar nuestra API Rest o Servidor Web?
+ Ya que la gestión de errores, y desarrollar nuevas funcionalidades es más fácil con un código ordenador, y esto aplica para cualquier desarrollo
+
+¿Qué ocurre si en el hook beforeEnter o beforeEach de una ruta, no llamamos a la función next?
+ Que nuestra aplicación se quedará parada, es decir, no navegará a la ruta destino
+
+¿Cual es la estructura mínima del objeto necesario para definir una ruta?
+ { ​path​: '/', ​name​: 'home', ​component​: Home }
+
+
+¿Qué método de mongoose utilizarías para definir un nuevo esquema?
+ mongoose.model
+
+¿Que tipo de ruta no acepta este código?
+router.route(​'/user/:id'​).get(UserController.user)
+ /user/
+

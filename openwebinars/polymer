@@ -1,0 +1,70 @@
+
+Los eventos tactiles soportados en Polymer son
+ Down, Up, Track y Tapq
+
+La siguiente afirmación es verdadera o falsa: Polymer no son web components
+ Falsa
+
+Con Shady DOM:
+ No podrás hacer uso del Shadow DOM
+
+Polymer es compatible de forma nativa en todos los navegadores
+ Falso
+
+Los webs components son:
+ un conjunto de normas que permite la creación de widgets o componentes reutilizables en las aplicaciones web.
+
+El binding de polymer nos permite ...
+ ligar propiedades o subpropiedades de un polymer element a valores del localDOM
+
+¿Para qué es el Polyfill webcomponents.js?
+
+ Un plugin para mejorar la renderización de carga de los Web Components
+ Una librería JavaScript que nos permite conectar con el Backend de NODEJS
+ Una librería que nos permite crear nuestros Custom elements.
+
+¿Para qué es el Polyfill webcomponents.js?
+ Una librería que nos permite crear nuestros Custom elements.
+
+Los behaviors implementan el mecanismo mediante el cual se puede compartir código entre componentes de Polymer.
+ Verdadero
+
+Los Web Components consisten en 4 estándares web:
+ Custom Elements, Shadow DOM, HTML Templates y HTML Imports
+
+Siempre que se pueda hay que utilizar eventos táctiles antes que los eventos desktop
+ Verdadero
+
+¿Cuales son los estados repetibles del Ciclo de vida de un elemento?
+ Attached y Detached
+
+Los Service Worker corren en:
+ Segundo Plano
+
+Podremos crear elementos personalizados que podemos usar en cualquier parte de nuestro sitio web con
+ Polymer
+
+El Callback especial del ciclo de vida es:
+ attributeChanged
+
+Marca todas las características correctas de un Service Worker
+ Son scripts que se ejecutan en segundo plano
+ Son asíncronos
+
+¿Cual es la diferencia entre el Shadow DOM y un iframe?
+ El Shadow DOM es parte del documento, no un documento diferente.
+
+Elige las respuestas correctas acerca de Shadow DOM:
+ Es un DOM encapsulado que vive dentro del DOM principal.
+ El Shadow DOM es parte del documento, no un documento diferente.
+
+Un elemento de Polymer tiene un ciclo de vida compuesto de:
+ Created, Ready, Attached, Detached y attributeChanged
+
+Marca todas las características correctas que deben considerarse en una Progressive web app:
+ Responsive
+ Progresiva
+ Segura
+
+¿Qué es Polymer?
+ Polymer es una librería frontend para realizar Web Components de forma rápida y productiva.

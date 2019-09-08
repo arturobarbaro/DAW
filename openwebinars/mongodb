@@ -1,0 +1,119 @@
+Para insertar elementos en un array usando el método update() empleamos el operador:
+ $push
+ $addToSet
+
+El sharding permite:
+ Distribuir los datos a través de varias máquinas
+
+El operador de expresión regular en mongo es:
+ $regex
+
+
+
+
+Un Replica set provee de:
+ Redundancia de información y disponibilidad
+
+Cuando una información es leída de manera recurrente y se repite en muchos documentos, la mejor decisión por norma general es:
+ Referenciar a otro objeto
+
+La shar key puede ser:
+ Hashed y Ranged
+
+Los índices apoyan:
+ La resolución eficiente de queries
+
+El operador $unwind nos permite:
+ Separar un objeto que tenga un campo array en tantos objetos como elementos tenga ese array
+
+En mongo son más eficientes las operaciones:
+ Agregación
+
+El rol dbOwner tiene:
+ Los mismos privilegios que userAdmin y dbAdmin juntos
+
+Para añadir un nodo a un replica set ya iniciado usamos el comando:
+ rs.add()
+
+La atomicidad en mongo se produce a nivel de:
+ Documento
+
+Para realizar una operación de agregación que ejecute dos $match seguidos es más eficiente:
+ Unirlos en un $match con el operador $and
+
+Cuando se ejecuta un find({},{}) en mongoDB las primeras y segundas llaves representan:
+ Filtro y proyección
+
+Las operaciones de lectura en un replica set las recibe:
+ El nodo que especifiquemos en el readConcern sea primario, secundario o el más cercano
+
+El tamaño máximo de un documento es:
+ 16MB
+
+Durante las operaciones de agregación se aprovechan los índices para los operadores:
+ $match y $sort
+
+Las tablas en SQL equivalen en MongoDB a los/las:
+ Colecciones
+
+Para aplicar comandos sobre un replica set usamos:
+ rs.COMANDO
+
+Las covered queries son queries:
+ Que emplean en su filtro únicamente campos indexados
+
+
+Las propiedades de los índices son:
+ Unicidad, parcialidad, dispersión y TTL
+
+
+
+
+
+
+
+
+
+MAL:
+
+En una cluster sharding actúan:
+ Un router mongos y routers de configuración
+ Un router mongos e instancias mongod
+
+Los índices multillave se declaran sobre
+ Dos o más campos
+ Objetos
+
+Los índices de texto nos permiten realizar consultas después de declararlos con el operador:
+ $regex
+ $text
+
+Los usuarios se crean en:
+ La base de datos sobre la que vamos a otorgarle permisos
+ Cualquier base de datos
+ La base de datos admin
+
+Los niveles de restricción para la validación en mongo son:
+Estricto y moderado.
+ Estricto, moderado y null
+
+Cuando queremos declarar un índice de texto sobre todos los campos de texto de una colección aplicamos la wild card con el comando:
+ “$all”:”text”
+ “$*”:”text”
+ “$wildCard”:”text”
+
+En un replica set podemos definir un miembro con prioridad 0 que puede:
+ Mantener una copia de los datos
+ Aceptar operaciones de lectura
+ Todas las anteriores
+
+La consola de MongoDB está en lenguaje:
+ C
+ Javascript
+
+Cuando en un cluster shard no separamos una colección en shards, esta se guarda en:
+ En el primary shard
+ En el shard más cercano
+
+Cuando $skip y $limit se ejecutan de manera consecutiva mongo:
+ Elimina el $limit

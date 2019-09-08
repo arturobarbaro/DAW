@@ -1,0 +1,124 @@
+
+Si​ ​queremos​ ​que​ ​nuestro​ ​componente​ ​tenga​ ​un​ ​propiedad​ ​interna​ ​en​ ​la​ ​que​ ​podamos​ ​almacenar​ ​un
+mensaje,​ ​¿qué​ ​tipo​ ​de​ ​propiedad​ ​creariamos?
+ computed​ ​property
+
+¿Cómo​ ​enviamos​ ​datos​ ​desde​ ​un​ ​componente​ ​padre,​ ​a​ ​su​ ​componente​ ​hijo?
+ Con​ ​las​ ​props
+
+¿Cómo​ ​puedo​ ​hacer​ ​para​ ​crear​ ​enlaces​ ​a​ ​otras​ ​páginas​ ​que​ ​he​ ​definido​ ​en​ ​mi​ ​router?
+ Mediante​ ​el​ ​tag,​ ​<router-view>​ ​y​ ​pasándole​ ​como​ ​parámetro​ ​el​ ​componente​ ​a​ ​pintar​ ​en​ ​la​ ​vista​ ​del router
+
+¿En​ ​qué​ ​hook​ ​del​ ​ciclo​ ​de​ ​vida​ ​pondrías​ ​una​ ​llamada​ ​a​ ​un​ ​servicio​ ​externo?
+ created​ ​ó​ ​mounted
+
+Con​ ​el​ ​CLI​ ​de​ ​Vue​ ​podemos​ ​crear​ ​con​ ​un​ ​solo​ ​comando​ ​proyectos​ ​de..
+ Todas​ ​las​ ​anteriores​ ​son​ ​correctas
+
+¿Qué​ ​parámetros​ ​son​ ​necesarios​ ​para​ ​definir​ ​una​ ​ruta​ ​en​ ​nuestro​ ​router?
+ Path,​ ​y​ ​component,​ ​name​ ​es​ ​optativo,​ ​pero​ ​aconsejable
+
+¿Por​ ​qué​ ​surgió​ ​Vue?
+ Porque​ ​el​ ​creador,​ ​Evan​ ​You,​ ​trabajaba​ ​con​ ​Angular,​ ​y​ ​pensó​ ​que​ ​era​ ​demasiado​ ​para​ ​lo​ ​que​ ​él necesitaba
+
+¿Qué​ ​ocurre​ ​en​ ​este​ ​caso?
+<​template​ ​lang​=​'html'​>
+​ ​ ​//​ ​...
+</​template​>
+<​script​>
+​ ​ ​export​ ​default​ ​{
+​ ​ ​ ​ ​name:​ ​'CoDevelopers'​,
+​ ​ ​ ​ ​ ​ ​data​ ​()​ ​{
+​ ​ ​ ​ ​ ​ ​ ​ ​return​ ​{
+​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​users​:​ ​[]
+​ ​ ​ ​ ​ ​ ​ ​ ​}
+​ ​ ​ ​ ​}​,
+​ ​ ​ ​ ​mounted​ ​()​ ​{
+​ ​ ​ ​ ​ ​ ​this​.​getTopUsers​()
+​ ​ ​ ​ ​}​,
+​ ​ ​ ​ ​methods:​ ​{
+​ ​ ​ ​ ​ ​ ​getTopUsers​ ​()​ ​{
+​ ​ ​ ​ ​ ​ ​ ​ ​return​ ​fetch​('http:​//ruta.del.servicio.externo')
+​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​.then(response​ ​=>​ ​response​.​json​())
+​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​.​then​(users​ ​=>​ ​{
+​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​this.users​ ​=​ ​users
+​ ​ ​ ​ ​ ​ ​ ​ ​ ​ ​})
+​ ​ ​ ​ ​ ​ ​}
+​ ​ ​ ​ ​}
+​ ​ ​}
+</​script​>
+<​style​ ​lang​=​'css'​ ​scoped​>
+//​ ​...
+</​style​>
+  Cuando​ ​se​ ​monta​ ​el​ ​componente,​ ​se​ ​realiza​ ​una​ ​petición​ ​a​ ​un​ ​servicio​ ​externo,​ ​y​ ​el​ ​resultado,​ ​es accesible​ ​desde​ ​el​ ​data​ ​“users”
+
+En​ ​nuestro​ ​template​ ​de​ ​PWA,​ ​si​ ​queremos​ ​una​ ​variable​ ​con​ ​un​ ​dato,​ ​por​ ​ejemplo,​ ​la​ ​ruta​ ​del​ ​servicio externo​ ​que​ ​vamos​ ​a​ ​usar,​ ​para​ ​el​ ​entorno​ ​de​ ​desarrollo​ ​de​ ​Vue​ ​y​ ​además,​ ​queremos​ ​que​ ​esté​ ​presente con​ ​el​ ​mismo​ ​valor​ ​en​ ​el​ ​entorno​ ​de​ ​producción​ ​también,​ ​¿donde​ ​la​ ​definirías?
+ En​ ​el​ ​fichero​ ​del​ ​entorno​ ​de​ ​producción​ ​y​ ​desarrollo
+
+¿Qué​ ​significa​ ​que​ ​Vue​ ​es​ ​un​ ​framework​ ​reactivo?
+ Vue​ ​envía​ ​una​ ​señal​ ​cada​ ​vez​ ​que​ ​actualizamos​ ​un​ ​dato​ ​y​ ​somos​ ​nosotros​ ​los​ ​encargados​ ​de gestionarlo​ ​en​ ​el​ ​resto​ ​de​ ​la​ ​app​ ​mediante​ ​el​ ​hook​ ​'updated'​ ​del​ ​ciclo​ ​de​ ​vida
+
+¿Qué​ ​ocurre​ ​si​ ​en​ ​el​ ​hook​ ​beforeEnter​ ​de​ ​una​ ​ruta,​ ​no​ ​llamamos​ ​a​ ​la​ ​función​ ​next?
+ Que​ ​nuestra​ ​aplicación​ ​se​ ​quedará​ ​parada,​ ​es​ ​decir,​ ​no​ ​navegará​ ​a​ ​la​ ​ruta​ ​destino
+
+¿Puedo​ ​usar​ ​bibliotecas​ ​no​ ​oficiales,​ ​como​ ​jQuery,​ ​dentro​ ​de​ ​un​ ​componente​ ​de​ ​Vue,​ ​para​ ​hacer​ ​llamadas
+Ajax?
+ Sí,​ ​incluso​ ​fetch()​ ​de​ ​JS​ ​o​ ​alguna​ ​de​ ​las​ ​bibliotecas​ ​oficiales
+
+¿Qué​ ​necesitamos​ ​para​ ​empezar​ ​a​ ​desarrollar​ ​con​ ​Vue?
+ Nada,​ ​Vue​ ​en​ ​un​ ​CDN,​ ​y​ ​un​ ​editor
+
+¿Qué​ ​ocurre​ ​si​ ​en​ ​el​ ​hook​ ​beforeEnter​ ​de​ ​una​ ​ruta,​ ​no​ ​llamamos​ ​a​ ​la​ ​función​ ​next?
+ Que​ ​nuestra​ ​aplicación​ ​se​ ​quedará​ ​parada,​ ​es​ ​decir,​ ​no​ ​navegará​ ​a​ ​la​ ​ruta​ ​destino
+
+¿Qué​ ​son​ ​los​ ​magic​ ​params​ ​en​ ​nuestras​ ​rutas?
+ Son​ ​parámetros​ ​que​ ​al​ ​colocarlos​ ​en​ ​una​ ​ruta,​ ​almacenan​ ​el​ ​valor​ ​correspondiente​ ​de​ ​la​ ​ruta​ ​destino,​ ​y que​ ​luego,​ ​podemos​ ​utilizar​ ​como​ ​propiedad​ ​de​ ​los​ ​componentes​ ​que​ ​se​ ​renderizan​ ​en​ ​la​ ​ruta
+
+80% completado
+¿Qué​ ​es​ ​CoDevelopers?
+
+<​template​ ​lang​=​'html'​>
+//​ ​...
+</​template​>
+<​script​>
+​ ​ ​//​ ​…
+​ ​ ​export​ ​default​ ​{
+​ ​ ​ ​ ​name:​ ​'CoApp'​,
+​ ​ ​ ​ ​//​ ​...
+​ ​ ​ ​ ​components:​ ​{
+​ ​ ​ ​ ​ ​ ​//​ ​...
+​ ​ ​ ​ ​ ​ ​CoDevelopers​:​ ​()​ ​=>​ ​import(​'@/components/CoDevelopers'​)
+​ ​ ​ ​ ​}
+​ ​ ​}
+</​script​>
+<​style​ ​lang​=​'css'​>
+</​style​>
+ Un​ ​componente​ ​asíncrono,​ ​que​ ​se​ ​carga​ ​solo​ ​y​ ​exclusivamente,​ ​cuando​ ​se​ ​carga​ ​el​ ​componente​ ​CoApp
+
+Selecciona​ ​qué​ ​plugin​ ​no​ ​es​ ​propio​ ​de​ ​Vue
+ Apollo
+
+¿Qué​ ​tipo​ ​de​ ​validación​ ​NO​ ​podemos​ ​hacer​ ​a​ ​las​ ​props​ ​de​ ​un​ ​componente?
+ Su​ ​fecha​ ​de​ ​creación
+
+¿Qué​ ​ocurre​ ​en​ ​este​ ​caso?
+
+//​ ​...
+​ ​ ​let​ ​router​ ​=​ ​new​ ​Router​(​{
+​ ​ ​ ​ ​mode​:​ ​'history'​,
+​ ​ ​ ​ ​routes​:​ ​[
+​ ​ ​ ​ ​ ​ ​//​ ​...
+​ ​ ​ ​ ​ ​ ​{
+​ ​ ​ ​ ​ ​ ​ ​ ​path​:​ ​'/my-curso/:user'​,
+​ ​ ​ ​ ​ ​ ​ ​ ​name​:​ ​'curso'​,
+​ ​ ​ ​ ​ ​ ​ ​ ​component​:​ ​Course​,
+​ ​ ​ ​ ​ ​ ​ ​ ​props​:​ ​true
+​ ​ ​ ​ ​ ​ ​}
+​ ​ ​ ​ ​]
+​ ​ ​}​)
+  La​ ​ruta​ ​/my-course/:user​ ​cargará​ ​el​ ​componente​ ​Course,​ ​y​ ​le​ ​pasará​ ​como​ ​propiedad​ ​el​ ​user,​ ​el​ ​valor que​ ​esté​ ​almacenado​ ​en​ ​el​ ​magic​ ​param​ ​user
+
+100% completado
+¿Qué​ ​tecnologías​ ​podemos​ ​utilizar​ ​para​ ​dar​ ​estilos​ ​a​ ​nuestra​ ​aplicación​ ​de​ ​Vue,​ ​si​ ​utilizamos​ ​el​ ​template
+de​ ​PWA?
+ Toda​s las​ ​anteriores
