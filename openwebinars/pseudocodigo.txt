@@ -1,0 +1,42 @@
+
+Pregunta	Tu respuesta	Resultado
+Cuál de los siguientes no es un tipo simple:	Array
+Correcto
+Si queremos acumular multiplicaciones, ¿a qué valor hay que inicializar el acumulador?	No hace falta inicializar el acumulador
+Incorrecto
+¿Cuándo se termina de ejecutar el ciclo en una instrucción Repetir-Hasta Que?	Cuando la condición es verdadera
+Correcto
+Si utilizamos el paso por valor para enviar los parámetros de una función...	Los cambios que se hagan en los parámetros formales se realizan en los parámetros reales
+Incorrecto
+¿Cuál de los siguientes lenguajes de programación es compilado?	java
+Incorrecto
+¿Qué es una función recursiva?	Una función que al ejecutarse hace llamadas a ella misma
+Correcto
+En un vector de 10 elementos, ¿qué instrucción es incorrecta?	vector[10]<-0;
+Correcto
+Si utilizamos el paso por referencia para enviar los parámetros de una función...	Los cambios que se hagan en los parámetros formales se realizan en los parámetros reales
+Correcto
+Si quiero devolver los 3 primeros caracteres de una cadena utilizo:	subcadena(cadena,1,3)
+Incorrecto
+El operador % lo utilizamos para:	Calcular el resto de una división
+Correcto
+En PseInt si elijo el perfil "estricto" las instrucciones tienen que terminar.	Con un punto y coma
+Correcto
+¿Cuál de los siguientes lenguajes de programación utiliza una máquina virtual para su ejecución?	java
+Correcto
+¿Cuál de los siguientes tipos de datos se considera una estructura de datos?	Array
+Correcto
+¿Qué función matemática devuelve la parte entera de número?	trunc()
+Correcto
+¿Cuál sería la forma correcta de definir un vector de 10 elementos?	Dimension vector[10];
+Correcto
+En la definición de una variable ¿Qué hay que indicar?	El nombre
+Incorrecto
+Un diagrama de flujo:	Es una técnica de representación gráfica de algoritmos
+Correcto
+En una subrutina, ¿qué son los parámetros reales?	Las variables que se envían a la subrutina cuando se llama.
+Correcto
+En una instrucción alternativa doble:	Tenemos dos bloques de instrucciones que se ejecutan según el resultado de la condición
+Correcto
+¿Cuál de los siguientes lenguajes de programación es interpretado?	python
+Correcto
