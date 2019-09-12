@@ -1,0 +1,42 @@
+
+Pregunta	Tu respuesta	Resultado
+¿En qué archivo se configura, comúnmente, las opciones de seguridad?	config.yml
+Incorrecto
+Symfony se puede explicar cómo...	Todas las anteriores son correctas.
+Correcto
+¿Sobre qué 2 clases importantes del componente HTTPFoundation se sustenta Symfony?	Request y Response
+Correcto
+¿Cuál de las siguientes afirmaciones son correctas a cerca de Doctrine?	Todas las anteriores.
+Correcto
+Para acceder y modificar a los parámetros de una entidad necesitamos disponer de los:	Getters y Setters correspondientes
+Correcto
+¿Cuál es el formato de archivos recomendado para trabajar con entidades?	Annotations
+Incorrecto
+¿Cuál es el método que procesa los datos del formulario tras su envío, en el controlador?	isValid
+Incorrecto
+¿Qué es un Framework?	Es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar.
+Correcto
+En el FormMapper...	Todas las respuestas anteriores son correctas
+Correcto
+¿Qué ventajas tiene el uso de un Framework?	Permite reutilizar código ya existente y promueve buenas prácticas de desarrollo. Evita reinventar la rueda., Facilita y agiliza el proceso de desarrollo de aplicaciones Web., El código resultante de nuestras aplicaciones utilizando un framework es más claro y reutilizable por otros programadores., Un framework suele estar altamente testeado, con lo que nuestras páginas suelen ser más fiables.
+Correcto
+¿Qué afirmación sobre las URLs es correcta?	URLs con un buen aspecto son una necesidad absoluta para cualquier aplicación web.
+Correcto
+¿Quién es la clase responsable de cargar el archivo de configuración según el controlador que utilices?	AppKernel
+Correcto
+El entorno de test se utiliza	cuando se ejecutan tests automáticas y sí se puede acceder directamente a través del navegador.
+Incorrecto
+Si en una entidad no se especifica el nombre de la tabla o en una propiedad el de la columna...	se tomará el nombre de éstos
+Correcto
+Respecto a la inyección de dependencias...	Todas las anteriores son correctas.
+Correcto
+¿Qué es Sonata Admin?	Sonata Admin es un gestor CRUD que nos facilitará enormemente la gestión de BackOffice de nuestro proyecto Symfony.
+Correcto
+Los formatos de archivos con los que podemos trabajar, usualmente, en un proyecto son:	Todas los anteriores
+Correcto
+El sistema de seguridad de Symfony se activa cuando:	El sistema detecta la entrada de una petición y la procesa
+Incorrecto
+El componente de formularios de Symfony nos facilita sobre los formularios...	Todas son correctas
+Correcto
+¿Qué es CSRF?	Es un método por el cual un usuario malintencionado intenta hacer que tus usuarios, sin saberlo, envíen datos que no quieren enviar
+Correcto
