@@ -1,0 +1,41 @@
+Pregunta	Tu respuesta	Resultado
+¿Cuál es la sintaxis básica de la directiva ngRepeat?	obj in collection $track by trackExpression
+Correcto
+¿Qué tipo de TypeScript representa a un módulo de AngularJS?	ng.IModule
+Correcto
+¿Cómo puede accederse a los filtros desde un controlador o servicio?	Con el servicio $scope
+Incorrecto
+¿Qué es DefinitelyTyped?	Un repositorio open source de definiciones de tipos TypeScript
+Correcto
+¿Cómo se autodenomina el proyecto AngularJS?	Un framework para implementar Model View Whatever
+Correcto
+Cuál no es un tipo soportado por TypeScript	decimal
+Incorrecto
+¿Para qué son útiles los providers?	Para configurar cómo se crearán los servicios, en fase de configuración
+Correcto
+Dado un scope $padre con un atributo $padre.objeto.name, y un $hijo, ¿qué ocurre al escribir sobre $hijo.objeto.name?	Se crea un objeto en el hijo, pero se escribe en el del padre
+Incorrecto
+¿Cómo pueden indicarse las dependencias en un servicio?	Todas son válidas
+Correcto
+¿Puede existir una directiva sin plantilla?	Sí
+Correcto
+¿Qué directiva crea $scope?	ngOptions
+Incorrecto
+¿Qué tipo TypeScript se emplea para las directivas?	La interfaz ng.IDirective
+Correcto
+Dado un scope $padre con una propiedad $padre.prop=15, y un scope $hijo del anterior (no aislado):	$padre.prop no es accesible
+Incorrecto
+¿Existe la herencia múltiple en TypeScript?	Sí
+Incorrecto
+¿Qué filtros pueden aplicarse a colecciones?	filter, orderBy y limitTo
+Correcto
+¿cómo provocamos que ngFormController se inyecte en el propio scope de un FORM?	Con ngModel
+Incorrecto
+Para la definición de módulos CommonJS o AMD en TypeScript:	Se usará la opción -m del compilador
+Correcto
+Los módulos de AngularJS	Permiten organizar una aplicación en unidades independientes
+Correcto
+¿Es posible crear elementos HTML custom con directivas?	Sí, con restrict='E'
+Correcto
+¿Cómo se concatenan filtros?	Mediante el operador pipe ("|")
+Correcto
