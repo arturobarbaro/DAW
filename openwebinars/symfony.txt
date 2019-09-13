@@ -40,3 +40,45 @@ El componente de formularios de Symfony nos facilita sobre los formularios...	To
 Correcto
 ¿Qué es CSRF?	Es un método por el cual un usuario malintencionado intenta hacer que tus usuarios, sin saberlo, envíen datos que no quieren enviar
 Correcto
+
+Pregunta	Tu respuesta	Resultado
+Cuando se usa el método trans()	Symfony busca la cadena de texto exacta dentro del catálogo de mensajes y si existe, la devuelve.
+Correcto
+En el FormMapper...	Todas las respuestas anteriores son correctas
+Correcto
+¿Qué es un servicio?	Un servicio es cualquier archivo que realiza algún tipo de tarea global.
+Incorrecto
+¿Qué es un Framework?	Es un conjunto estandarizado de conceptos, prácticas y criterios para enfocar un tipo de problemática particular que sirve como referencia, para enfrentar y resolver nuevos problemas de índole similar.
+Correcto
+El término internacionalización se refiere a:	Al proceso de crear una aplicación legible por cualquier persona independientemente de su idioma.
+Incorrecto
+En los intervalos de pluralización...	El delimitador izquierdo puede ser [ (inclusivo) o ] (exclusivo). El delimitador derecho puede ser [(exclusivo) o ] (inclusivo)
+Correcto
+¿Qué comando de consola se utiliza para generar la clase Type de un formulario?	$ php bin/console doctrine:generate:form AppBundle:Products --no-interaction
+Correcto
+¿Qué opción de configuración es la que permite que el firewall conceda el acceso a los usuarios anónimos?	Anonymous
+Correcto
+Los formatos de archivos con los que podemos trabajar, usualmente, en un proyecto son:	Todas los anteriores
+Correcto
+El entorno de test se utiliza	cuando se ejecutan tests automáticas y no se puede acceder directamente a través del navegador
+Correcto
+¿Qué afirmación sobre las URLs es correcta?	URLs con un buen aspecto son una necesidad absoluta para cualquier aplicación web.
+Correcto
+¿Quién es la clase responsable de cargar el archivo de configuración según el controlador que utilices?	AppKernel
+Correcto
+La mayoría de los controladores siempre se encargan de las mismas tareas:	obtener el Request y devolver el Response.
+Correcto
+¿Qué ventajas tiene el uso de un Framework?	Permite reutilizar código ya existente y promueve buenas prácticas de desarrollo. Evita reinventar la rueda., Facilita y agiliza el proceso de desarrollo de aplicaciones Web., El código resultante de nuestras aplicaciones utilizando un framework es más claro y reutilizable por otros programadores., Un framework suele estar altamente testeado, con lo que nuestras páginas suelen ser más fiables.
+Correcto
+¿Qué es CSRF?	Es un método por el cual un usuario malintencionado intenta hacer que tus usuarios, sin saberlo, envíen datos que no quieren enviar
+Correcto
+El sistema de seguridad de Symfony se activa cuando:	Todas las anteriores son correctas
+Incorrecto
+¿Cuál de las siguientes afirmaciones son correctas a cerca de Doctrine?	Todas las anteriores.
+Correcto
+Si se deniega el acceso al usuario	Todas las anteriores
+Incorrecto
+¿Qué método se debe utilizar si solamente quieres comprobar si el formulario se ha enviado?	isSubmitted
+Correcto
+¿Quiénes son la clave del sistema de autorización?	Los parámetros
+Incorrecto
